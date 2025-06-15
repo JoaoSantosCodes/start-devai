@@ -193,7 +193,7 @@ function main() {
         } else {
             limparBackup();
             relatorio.push('Organização concluída com sucesso.');
-            
+
             // Atualizar GitHub
             relatorio.push('\nIniciando atualização do GitHub...');
             try {

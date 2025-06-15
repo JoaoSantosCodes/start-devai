@@ -10,97 +10,110 @@ Por favor, leia nosso [Código de Conduta](CODE_OF_CONDUCT.md) antes de contribu
 
 ### 1. Configuração do Ambiente
 
-1. Faça um fork do repositório
-2. Clone seu fork:
-    ```bash
-    git clone https://github.com/seu-usuario/DevAI-Assistant.git
-    cd DevAI-Assistant
-    ```
-3. Instale as dependências:
-    ```bash
-    npm install
-    ```
-4. Compile o projeto:
-    ```bash
-    npm run compile
-    ```
+```bash
+# Clone o repositório
+git clone https://github.com/JoaoSantosCodes/start-devai.git
 
-### 2. Fluxo de Trabalho
+# Instale as dependências
+npm install
 
-1. Crie uma branch para sua feature:
-    ```bash
-    git checkout -b feature/nome-da-feature
-    ```
-2. Faça suas alterações
-3. Execute os testes:
-    ```bash
-    npm test
-    ```
-4. Commit suas alterações:
-    ```bash
-    git commit -m "feat: descrição da feature"
-    ```
-5. Push para sua branch:
-    ```bash
-    git push origin feature/nome-da-feature
-    ```
-6. Abra um Pull Request
+# Configure o ambiente de desenvolvimento
+npm run setup
+```
 
-### 3. Convenções de Código
+### 2. Padrões de Código
 
--   Use TypeScript para todo o código novo
--   Siga o estilo de código existente
--   Use ESLint e Prettier para formatação
--   Escreva testes para novas funcionalidades
--   Documente novas APIs e funções
--   Mantenha o código limpo e organizado
+#### TypeScript
 
-### 4. Commits
+-   Use TypeScript estrito
+-   Documente interfaces e tipos
+-   Siga o estilo de código do projeto
+-   Use ESLint e Prettier
 
-Siga o padrão [Conventional Commits](https://www.conventionalcommits.org/):
+#### Commits
 
--   `feat:` para novas features
--   `fix:` para correções de bugs
--   `docs:` para documentação
--   `style:` para formatação
--   `refactor:` para refatoração
--   `test:` para testes
--   `chore:` para tarefas de manutenção
+-   Use mensagens claras e descritivas
+-   Siga o padrão: `tipo(escopo): descrição`
+-   Exemplo: `feat(ui): adiciona novo painel de controle`
 
-### 5. Pull Requests
+#### Branches
 
-1. Atualize sua branch com a main:
-    ```bash
-    git checkout main
-    git pull
-    git checkout feature/nome-da-feature
-    git rebase main
-    ```
-2. Resolva conflitos se houver
-3. Certifique-se que todos os testes passam
-4. Atualize a documentação se necessário
-5. Descreva suas alterações no PR
+-   `main`: código em produção
+-   `develop`: desenvolvimento
+-   `feature/*`: novas funcionalidades
+-   `fix/*`: correções
+-   `docs/*`: documentação
 
-### 6. Documentação
+### 3. Processo de Pull Request
 
--   Atualize o README.md se necessário
--   Documente novas APIs e funções
--   Adicione exemplos de uso
--   Atualize o CHANGELOG.md
+1. **Preparação**
 
-### 7. Testes
+    - Atualize sua branch com a main
+    - Resolva conflitos
+    - Atualize documentação
 
--   Escreva testes unitários
--   Escreva testes de integração
--   Mantenha a cobertura de testes alta
--   Execute todos os testes antes de submeter
+2. **Checklist**
 
-### 8. Revisão de Código
+    - [ ] Código segue padrões
+    - [ ] Testes passam
+    - [ ] Documentação atualizada
+    - [ ] Sem conflitos
+    - [ ] Descrição clara
 
--   Responda aos comentários dos revisores
--   Faça as alterações solicitadas
--   Mantenha o PR atualizado
--   Seja paciente com o processo de revisão
+3. **Revisão**
+    - Aguarde feedback
+    - Responda comentários
+    - Faça ajustes necessários
+
+### 4. Testes
+
+#### Unitários
+
+```bash
+npm run test
+```
+
+#### Integração
+
+```bash
+npm run test:integration
+```
+
+#### Cobertura
+
+```bash
+npm run test:coverage
+```
+
+### 5. Documentação
+
+-   Atualize README se necessário
+-   Documente novas funcionalidades
+-   Mantenha exemplos atualizados
+-   Atualize fluxogramas
+
+### 6. Checklist de Contribuição
+
+-   [ ] Código segue padrões
+-   [ ] Testes escritos e passando
+-   [ ] Documentação atualizada
+-   [ ] Sem warnings/erros
+-   [ ] Commits organizados
+-   [ ] PR descritiva
+
+### 7. Suporte
+
+-   Issues para bugs
+-   Discussões para ideias
+-   Pull requests para contribuições
+-   Documentação para dúvidas
+
+### 8. Reconhecimento
+
+-   Contribuidores listados no README
+-   Menção em releases
+-   Badges de contribuição
+-   Agradecimentos especiais
 
 ## Recursos
 
