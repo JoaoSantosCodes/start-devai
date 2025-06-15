@@ -1,166 +1,257 @@
 # Tutorial do DevAI Extension
 
-## Introdução
+Este tutorial guiará você através do uso do DevAI Extension, desde a instalação até recursos avançados.
 
-Este tutorial guiará você através das principais funcionalidades do DevAI Extension, mostrando como usar cada recurso de forma prática.
+## 1. Instalação
 
-## 1. Primeiros Passos
+### Requisitos
 
-### Instalação
+-   VS Code
+-   Node.js 16+
+-   Python 3.8+
+-   GPU NVIDIA (recomendado)
 
-1. Abra o VS Code
-2. Pressione `Ctrl+Shift+X` para abrir a aba de extensões
-3. Pesquise por "DevAI"
-4. Clique em "Instalar"
+### Passos
 
-### Configuração Inicial
+1. **Instale o VS Code**
 
-1. Pressione `Ctrl+Shift+P` para abrir a paleta de comandos
-2. Digite "DevAI: Validar Extensões"
-3. Aguarde a detecção do tipo de projeto
-4. Revise as recomendações sugeridas
+    - Baixe em: https://code.visualstudio.com/
 
-## 2. Organizando Extensões
+2. **Instale a Extensão**
 
-### Usando o Organizador
+    - Abra o VS Code
+    - Pressione `Ctrl+Shift+X`
+    - Pesquise "DevAI"
+    - Clique em "Instalar"
 
-1. Pressione `Ctrl+Shift+P`
-2. Digite "DevAI: Organizar Extensões"
-3. Veja o relatório gerado:
+3. **Primeira Execução**
+    - Pressione `Ctrl+Shift+P`
+    - Digite "DevAI: Validar Extensões"
+    - Siga as recomendações
 
-    ```
-    📊 Relatório de Organização de Extensões
+## 2. Configuração Inicial
 
-    📦 Extensões Instaladas:
-      - Python (languages)
-      - ESLint (formatting)
-      - GitLens (git)
-      - Material Icon Theme (themes)
+### 1. Preparação do Ambiente
 
-    ⚠️ Extensões Não Utilizadas:
-      - old-extension-1
-      - unused-extension-2
+```bash
+# Clone o repositório
+git clone https://github.com/JoaoSantosCodes/start-devai.git
+cd start-devai
 
-    ✨ Extensões Recomendadas:
-      - Prettier
-      - Path Intellisense
-    ```
+# Crie um ambiente virtual Python
+python -m venv .venv
+.venv\Scripts\activate
 
-4. Escolha uma ação:
-    - "Desativar Extensões Não Utilizadas"
-    - "Instalar Extensões Recomendadas"
-    - "Ignorar"
+# Instale as dependências Python
+pip install -r requirements.txt
 
-### Gerenciando Grupos
+# Instale as dependências Node.js
+npm install
+```
 
-1. Pressione `Ctrl+Shift+P`
-2. Digite "DevAI: Gerenciar Grupos de Extensões"
-3. Selecione um grupo (ex: "Linguagens")
-4. Escolha uma ação:
-    - "Ativar/Desativar Grupo"
-    - "Ver Detalhes"
+### 2. Instalação do DevAI
 
-## 3. Perfis Inteligentes
+```bash
+# Execute o script de setup
+python src/core/setup_manager.py
 
-### Criando um Perfil
+# Siga as instruções na tela:
+# - Verifique o ambiente
+# - Configure o npm
+# - Instale dependências
+# - Inicie o servidor
+```
 
-1. Pressione `Ctrl+Shift+P`
-2. Digite "DevAI: Criar Perfil de Extensões"
-3. Digite o nome do perfil (ex: "Desenvolvimento Web")
-4. Adicione uma descrição
-5. Selecione as extensões desejadas
+### 3. Configuração do VS Code
 
-### Aplicando um Perfil
+-   Abra o VS Code
+-   Pressione `Ctrl+Shift+P`
+-   Digite "DevAI: Configure"
+-   Ajuste as configurações:
+    -   Limite de VRAM
+    -   Processos protegidos
+    -   Logs
+    -   Performance
 
-1. Pressione `Ctrl+Shift+P`
-2. Digite "DevAI: Aplicar Perfil de Extensões"
-3. Selecione o perfil desejado
-4. Confirme a aplicação
+## 3. Recursos Básicos
 
-## 4. Análise de Desempenho
+### 1. Organizador de Extensões
 
-### Verificando Performance
+-   Comando: `DevAI: Organizar Extensões`
+-   Agrupa e gerencia suas extensões
+-   Recomenda novas extensões
+-   Otimiza o ambiente
 
-1. Pressione `Ctrl+Shift+P`
-2. Digite "DevAI: Analisar Desempenho"
-3. Veja o relatório:
+### 2. Perfis Inteligentes
 
-    ```
-    📊 Relatório de Desempenho
+-   Comando: `DevAI: Validar Extensões`
+-   Detecta o tipo de projeto
+-   Sugere configurações ideais
+-   Aplica perfis automaticamente
 
-    💻 Uso de CPU: 45%
-    🧠 Uso de Memória: 1.2GB
-    ⚡ Extensões Lentas:
-      - extension-1: 200ms
-      - extension-2: 150ms
+### 3. Análise de Desempenho
 
-    💡 Sugestões:
-      - Desativar extensões não utilizadas
-      - Atualizar extensões desatualizadas
-    ```
+-   Comando: `DevAI: Analisar Desempenho`
+-   Monitora uso de recursos
+-   Identifica gargalos
+-   Sugere otimizações
 
-4. Siga as sugestões de otimização
+## 4. Recursos Avançados
 
-## 5. Scripts de Organização
+### 1. Perfis Personalizados
 
-### Organizando o Projeto
+```json
+// .vscode/devai-profile.json
+{
+    "name": "Meu Perfil",
+    "extensions": ["ms-python.python", "ms-vscode.vscode-typescript-tslint-plugin"],
+    "settings": {
+        "python.linting.enabled": true,
+        "typescript.tsdk": "node_modules/typescript/lib"
+    }
+}
+```
 
-1. Abra o terminal
-2. Execute:
-    ```bash
-    node organizar-projeto.js
-    ```
-3. Verifique os relatórios gerados:
-    - `relatorio-organizacao.txt`
-    - `relatorio-github.txt`
+### 2. Scripts de Automação
 
-## 6. Dicas e Truques
+```bash
+# Organização automática
+node scripts/organizar-projeto.js
 
-### Atalhos Úteis
+# Análise de desempenho
+node scripts/analisar-desempenho.js
 
--   `Ctrl+Shift+V`: Validar Extensões
--   `Ctrl+Shift+P`: Abrir Paleta de Comandos
--   `Ctrl+Shift+A`: Analisar Desempenho
+# Backup de configurações
+node scripts/backup-config.js
+```
 
-### Boas Práticas
+### 3. Integração com GitHub
 
-1. Sempre faça backup antes de grandes mudanças
-2. Revise os relatórios após cada operação
-3. Mantenha os perfis atualizados
-4. Monitore o desempenho regularmente
+```bash
+# Atualização automática
+node scripts/atualizar-github.js
 
-## 7. Troubleshooting
+# Backup no GitHub
+node scripts/backup-github.js
+```
 
-### Problemas Comuns
+## 5. Fluxo de Trabalho
 
-1. **Extensões não aparecem**
+### 1. Início do Projeto
 
-    - Verifique se a extensão está ativada
-    - Reinicie o VS Code
-    - Verifique os logs
+```bash
+# Clone o repositório
+git clone https://github.com/JoaoSantosCodes/start-devai.git
 
-2. **Erro ao aplicar perfil**
+# Instale dependências
+npm install
 
-    - Verifique as permissões
-    - Confirme se as extensões existem
-    - Tente criar um novo perfil
+# Compile o projeto
+npm run compile
+```
 
-3. **Performance lenta**
-    - Use o analisador de desempenho
-    - Desative extensões não utilizadas
-    - Atualize extensões desatualizadas
+### 2. Organização Diária
+
+-   Use `DevAI: Organizar Extensões` para manter o ambiente limpo
+-   Aplique perfis inteligentes para cada projeto
+-   Monitore o desempenho regularmente
+
+### 3. Manutenção
+
+-   Execute `node organizar-projeto.js` para organização automática
+-   Revise os relatórios gerados
+-   Mantenha os perfis atualizados
+
+## 6. Solução de Problemas
+
+### 1. Problemas Comuns
+
+-   Extensão não inicia
+-   Erro de permissão
+-   Performance lenta
+-   Configurações perdidas
+
+### 2. Logs
+
+```bash
+# Acesse os logs
+cat ~/.vscode/extensions/devai-extension/logs/error.log
+
+# Limpe os logs
+rm -rf ~/.vscode/extensions/devai-extension/logs/*
+```
+
+### 3. Recuperação
+
+```bash
+# Restaure configurações
+node scripts/restaurar-config.js
+
+# Limpe cache
+rm -rf ~/.vscode/extensions/devai-extension/cache
+```
+
+## 7. Dicas e Truques
+
+### 1. Atalhos
+
+-   `Ctrl+Shift+P`: Abre a paleta de comandos
+-   `Ctrl+Shift+X`: Abre o gerenciador de extensões
+-   `Ctrl+Shift+G`: Abre o gerenciador de perfis
+
+### 2. Configurações
+
+```json
+// settings.json
+{
+    "devai.autoUpdate": true,
+    "devai.performanceMode": true,
+    "devai.backupEnabled": true
+}
+```
+
+### 3. Perfis
+
+-   Crie perfis para diferentes tipos de projeto
+-   Compartilhe perfis com a equipe
+-   Mantenha os perfis atualizados
 
 ## 8. Recursos Adicionais
 
--   [Documentação Completa](IMPLEMENTACAO.md)
--   [Guia de Uso](usage.md)
+### 1. Documentação
+
+-   [Guia de Implementação](IMPLEMENTACAO.md)
 -   [Roadmap](ROADMAP.md)
--   [Fluxograma do Sistema](FLUXOGRAMA.md)
+-   [Fluxograma](FLUXOGRAMA.md)
 
-## Suporte
+### 2. Suporte
 
-Para suporte adicional:
+-   Consulte a [documentação](docs/)
+-   Abra uma issue no GitHub
+-   Entre em contato com a equipe
 
-1. Consulte a documentação
-2. Abra uma issue no GitHub
-3. Entre em contato com a equipe
+### 3. Comunidade
+
+-   Participe das discussões
+-   Compartilhe seus perfis
+-   Ajude outros usuários
+
+## 9. Próximos Passos
+
+### 1. Exploração
+
+-   Teste todos os comandos
+-   Crie seus próprios perfis
+-   Experimente as integrações
+
+### 2. Contribuição
+
+-   Reporte bugs
+-   Sugira melhorias
+-   Ajude com a documentação
+
+### 3. Aprendizado
+
+-   Leia a documentação
+-   Assista tutoriais
+-   Participe da comunidade

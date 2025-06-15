@@ -1,139 +1,234 @@
 # Guia de Contribuição
 
-Obrigado por considerar contribuir com o DevAI Extension! Este documento fornece diretrizes e instruções para contribuir com o projeto.
+Este guia fornece instruções detalhadas para contribuir com o DevAI Extension.
 
-## Como Contribuir
+## Para Desenvolvedores
 
 ### 1. Configuração do Ambiente
 
-1. **Fork o Repositório**
+#### Requisitos
+- Node.js 16+
+- VS Code
+- Git
+- Python 3.8+
+- GPU NVIDIA (recomendado)
 
-    ```bash
-    git clone https://github.com/seu-usuario/start-devai.git
-    cd start-devai
-    ```
+#### Setup Inicial
+```bash
+# Clone o repositório
+git clone https://github.com/JoaoSantosCodes/start-devai.git
 
-2. **Instale as Dependências**
+# Instale dependências
+npm install
 
-    ```bash
-    npm install
-    ```
+# Compile o projeto
+npm run compile
+```
 
-3. **Configure o Ambiente de Desenvolvimento**
-    ```bash
-    npm run compile
-    ```
+### 2. Estrutura do Projeto
 
-### 2. Fluxo de Trabalho
+```
+devai-extension/
+├── src/
+│   ├── core/           # Núcleo da extensão
+│   │   ├── aiManager.ts
+│   │   ├── logger.ts
+│   │   ├── setup_manager.ts
+│   │   ├── smartProfiles.ts
+│   │   ├── performanceAnalyzer.ts
+│   │   └── extensionOrganizer.ts
+│   └── ui/            # Interface do usuário
+│       └── aiPanel.ts
+├── docs/              # Documentação
+├── scripts/           # Scripts de automação
+└── tests/             # Testes
+```
 
-1. **Crie uma Branch**
+### 3. Fluxo de Desenvolvimento
 
-    ```bash
-    git checkout -b feature/nova-funcionalidade
-    ```
+#### Criando uma Feature
+```bash
+# Crie uma branch
+git checkout -b feature/nova-funcionalidade
 
-2. **Desenvolva sua Feature**
+# Desenvolva a feature
+# Teste localmente
+npm run compile
 
-    - Siga as convenções de código
-    - Adicione testes
-    - Atualize a documentação
+# Faça commit
+git add .
+git commit -m "feat: nova funcionalidade"
 
-3. **Faça Commit**
-
-    ```bash
-    git add .
-    git commit -m "feat: nova funcionalidade"
-    ```
-
-4. **Envie para o GitHub**
-
-    ```bash
-    git push origin feature/nova-funcionalidade
-    ```
-
-5. **Crie um Pull Request**
-    - Descreva as mudanças
-    - Referencie issues relacionadas
-    - Inclua screenshots se aplicável
-
-### 3. Convenções de Código
-
-#### TypeScript
-
--   Use TypeScript estrito
--   Siga o estilo de código do projeto
--   Documente funções e classes
--   Adicione tipos explícitos
+# Envie para o GitHub
+git push origin feature/nova-funcionalidade
+```
 
 #### Testes
-
--   Escreva testes unitários
--   Mantenha a cobertura de testes
--   Use mocks quando necessário
+- Execute os testes unitários
+- Teste manualmente no VS Code
+- Verifique a compilação
 
 #### Documentação
+- Atualize a documentação relevante
+- Adicione exemplos de uso
+- Atualize o README se necessário
 
--   Atualize a documentação relevante
--   Adicione exemplos de uso
--   Mantenha o README atualizado
-
-### 4. Processo de Revisão
-
-1. **Code Review**
-
-    - Revise o código de outros contribuidores
-    - Forneça feedback construtivo
-    - Aprenda com as revisões
-
-2. **Aprovação**
-
-    - Duas aprovações necessárias
-    - Todos os testes devem passar
-    - Documentação deve estar atualizada
-
-3. **Merge**
-    - Squash commits quando apropriado
-    - Mantenha o histórico limpo
-    - Atualize o changelog
-
-### 5. Boas Práticas
+### 4. Boas Práticas
 
 #### Código
+- Siga o estilo de código do projeto
+- Adicione comentários explicativos
+- Mantenha a cobertura de testes
 
--   Mantenha o código limpo e organizado
--   Use nomes descritivos
--   Evite código duplicado
--   Siga princípios SOLID
+#### Commits
+- Use mensagens claras e descritivas
+- Siga o padrão de commits
+- Referencie issues quando relevante
 
-#### Git
+#### Pull Requests
+- Descreva as mudanças
+- Inclua screenshots se aplicável
+- Referencie issues relacionadas
 
--   Use mensagens de commit claras
--   Mantenha commits pequenos e focados
--   Siga o padrão de commits
--   Mantenha o histórico limpo
+### 5. Recursos para Desenvolvimento
 
-#### Comunicação
+- [Documentação de Implementação](IMPLEMENTACAO.md)
+- [Guia de Uso](usage.md)
+- [Roadmap](ROADMAP.md)
+- [Fluxograma do Sistema](FLUXOGRAMA.md)
 
--   Seja respeitoso e profissional
--   Forneça feedback construtivo
--   Mantenha discussões focadas
--   Documente decisões importantes
+## Para Usuários
 
-### 6. Recursos
+### 1. Reportando Bugs
 
--   [Documentação](docs/)
--   [Tutorial](docs/TUTORIAL.md)
--   [Onboarding](docs/ONBOARDING.md)
--   [Fluxograma](docs/FLUXOGRAMA.md)
+#### Template de Bug Report
+```markdown
+## Descrição
+[Descreva o bug em detalhes]
 
-### 7. Suporte
+## Passos para Reproduzir
+1. [Primeiro passo]
+2. [Segundo passo]
+3. [E assim por diante...]
 
-Para dúvidas ou sugestões:
+## Comportamento Esperado
+[O que deveria acontecer]
 
--   Abra uma issue
--   Participe das discussões
--   Entre em contato com a equipe
+## Comportamento Atual
+[O que está acontecendo]
 
-## Agradecimentos
+## Screenshots
+[Se aplicável, adicione screenshots]
 
-Obrigado por contribuir com o DevAI Extension! Sua ajuda é fundamental para o sucesso do projeto.
+## Ambiente
+- VS Code Version: [versão]
+- DevAI Version: [versão]
+- OS: [sistema operacional]
+
+## Logs
+[Adicione logs relevantes]
+```
+
+### 2. Sugerindo Features
+
+#### Template de Feature Request
+```markdown
+## Descrição
+[Descreva a feature em detalhes]
+
+## Caso de Uso
+[Como esta feature seria útil]
+
+## Alternativas Consideradas
+[Quais alternativas você já tentou]
+
+## Screenshots
+[Se aplicável, adicione mockups]
+```
+
+### 3. Melhorando a Documentação
+
+#### Áreas que Precisam de Atenção
+- [ ] README.md
+- [ ] Guias de uso
+- [ ] Exemplos
+- [ ] API docs
+
+#### Como Contribuir
+1. Identifique uma área que precisa de melhoria
+2. Faça as alterações necessárias
+3. Envie um pull request
+
+## Processo de Contribuição
+
+### 1. Fork e Clone
+```bash
+# Faça fork do repositório
+# Clone seu fork
+git clone https://github.com/seu-usuario/start-devai.git
+```
+
+### 2. Desenvolvimento
+```bash
+# Crie uma branch
+git checkout -b feature/nova-funcionalidade
+
+# Faça suas alterações
+# Teste localmente
+npm run compile
+
+# Faça commit
+git add .
+git commit -m "feat: nova funcionalidade"
+```
+
+### 3. Envio
+```bash
+# Envie para seu fork
+git push origin feature/nova-funcionalidade
+
+# Crie um Pull Request
+# Siga o template
+# Aguarde a revisão
+```
+
+## Código de Conduta
+
+### 1. Comunicação
+- Seja respeitoso
+- Use linguagem inclusiva
+- Mantenha o foco no projeto
+
+### 2. Colaboração
+- Ajude outros contribuidores
+- Seja aberto a feedback
+- Mantenha a qualidade do código
+
+### 3. Compromisso
+- Mantenha suas promessas
+- Comunique atrasos
+- Peça ajuda quando necessário
+
+## Suporte
+
+### Para Desenvolvedores
+- Participe das discussões no GitHub
+- Revise o código de outros contribuidores
+- Ajude a manter a documentação atualizada
+
+### Para Usuários
+- Consulte a [documentação](docs/)
+- Abra uma issue no GitHub
+- Entre em contato com a equipe
+
+## Próximos Passos
+
+### 1. Desenvolvedores
+- Revise issues abertas
+- Proponha melhorias
+- Ajude com a documentação
+
+### 2. Usuários
+- Teste novas features
+- Reporte bugs
+- Sugira melhorias
