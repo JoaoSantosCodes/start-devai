@@ -4,26 +4,155 @@ Movido: C:\Cursor\devai-extension\__backup_organizer\src\core\logger.ts -> C:\Cu
 Movido: C:\Cursor\devai-extension\__backup_organizer\src\core\setup_manager.ts -> C:\Cursor\devai-extension\src\core\setup_manager.ts
 Movido: C:\Cursor\devai-extension\__backup_organizer\src\ui\aiPanel.ts -> C:\Cursor\devai-extension\src\ui\aiPanel.ts
 
+Verificando referências cruzadas...
+
+Atenção: Arquivo referenciado não encontrado: https://keepachangelog.com/pt-BR/1.0.0/
+  Referenciado em:
+  - C:\Cursor\devai-extension\CHANGELOG.md (Keep a Changelog)
+  - C:\Cursor\devai-extension\__backup_organizer\CHANGELOG.md (Keep a Changelog)
+
+Atenção: Arquivo referenciado não encontrado: https://semver.org/lang/pt-BR/
+  Referenciado em:
+  - C:\Cursor\devai-extension\CHANGELOG.md (Versionamento Semântico)
+  - C:\Cursor\devai-extension\__backup_organizer\CHANGELOG.md (Versionamento Semântico)
+
+Atenção: Arquivo referenciado não encontrado: https://www.contributor-covenant.org
+  Referenciado em:
+  - C:\Cursor\devai-extension\CODE_OF_CONDUCT.md (Contributor Covenant)
+  - C:\Cursor\devai-extension\__backup_organizer\CODE_OF_CONDUCT.md (Contributor Covenant)
+
+Atenção: Arquivo referenciado não encontrado: https://github.com/DevAI-Assistant/DevAI-Assistant/wiki
+  Referenciado em:
+  - C:\Cursor\devai-extension\CONTRIBUTING.md (Documentação da API)
+  - C:\Cursor\devai-extension\__backup_organizer\CONTRIBUTING.md (Documentação da API)
+
+Atenção: Arquivo referenciado não encontrado: https://github.com/DevAI-Assistant/DevAI-Assistant/wiki/Style-Guide
+  Referenciado em:
+  - C:\Cursor\devai-extension\CONTRIBUTING.md (Guia de Estilo)
+  - C:\Cursor\devai-extension\__backup_organizer\CONTRIBUTING.md (Guia de Estilo)
+
+Atenção: Arquivo referenciado não encontrado: https://github.com/DevAI-Assistant/DevAI-Assistant/wiki/FAQ
+  Referenciado em:
+  - C:\Cursor\devai-extension\CONTRIBUTING.md (FAQ)
+  - C:\Cursor\devai-extension\__backup_organizer\CONTRIBUTING.md (FAQ)
+
+Atenção: Arquivo referenciado não encontrado: IMPLEMENTACAO.md
+  Referenciado em:
+  - C:\Cursor\devai-extension\docs\CONTRIBUTING.md (Documentação de Implementação)
+  - C:\Cursor\devai-extension\docs\ONBOARDING.md (Documentação de Implementação)
+  - C:\Cursor\devai-extension\docs\TUTORIAL.md (Guia de Implementação)
+  - C:\Cursor\devai-extension\__backup_organizer\docs\CONTRIBUTING.md (Documentação de Implementação)
+  - C:\Cursor\devai-extension\__backup_organizer\docs\ONBOARDING.md (Documentação de Implementação)
+  - C:\Cursor\devai-extension\__backup_organizer\docs\TUTORIAL.md (Guia de Implementação)
+
+Atenção: Arquivo referenciado não encontrado: usage.md
+  Referenciado em:
+  - C:\Cursor\devai-extension\docs\CONTRIBUTING.md (Guia de Uso)
+  - C:\Cursor\devai-extension\docs\ONBOARDING.md (Guia de Uso)
+  - C:\Cursor\devai-extension\__backup_organizer\docs\CONTRIBUTING.md (Guia de Uso)
+  - C:\Cursor\devai-extension\__backup_organizer\docs\ONBOARDING.md (Guia de Uso)
+
+Atenção: Arquivo referenciado não encontrado: FLUXOGRAMA.md
+  Referenciado em:
+  - C:\Cursor\devai-extension\docs\CONTRIBUTING.md (Fluxograma do Sistema)
+  - C:\Cursor\devai-extension\docs\ONBOARDING.md (Fluxograma do Sistema)
+  - C:\Cursor\devai-extension\docs\TUTORIAL.md (Fluxograma)
+  - C:\Cursor\devai-extension\__backup_organizer\docs\CONTRIBUTING.md (Fluxograma do Sistema)
+  - C:\Cursor\devai-extension\__backup_organizer\docs\ONBOARDING.md (Fluxograma do Sistema)
+  - C:\Cursor\devai-extension\__backup_organizer\docs\TUTORIAL.md (Fluxograma)
+
+Atenção: Arquivo referenciado não encontrado: https://github.com/JoaoSantosCodes/start-devai/issues
+  Referenciado em:
+  - C:\Cursor\devai-extension\docs\FAQ.md (GitHub Issues)
+  - C:\Cursor\devai-extension\docs\TROUBLESHOOTING.md (GitHub Issues)
+  - C:\Cursor\devai-extension\__backup_organizer\docs\FAQ.md (GitHub Issues)
+  - C:\Cursor\devai-extension\__backup_organizer\docs\TROUBLESHOOTING.md (GitHub Issues)
+
+Atenção: Arquivo referenciado não encontrado: https://discord.gg/devai
+  Referenciado em:
+  - C:\Cursor\devai-extension\docs\FAQ.md (Discord)
+  - C:\Cursor\devai-extension\__backup_organizer\docs\FAQ.md (Discord)
+
+Atenção: Arquivo referenciado não encontrado: https://github.com/JoaoSantosCodes/start-devai/releases
+  Referenciado em:
+  - C:\Cursor\devai-extension\docs\FAQ.md (GitHub Releases)
+  - C:\Cursor\devai-extension\__backup_organizer\docs\FAQ.md (GitHub Releases)
+
+Atenção: Arquivo referenciado não encontrado: TUTORIAL.md
+  Referenciado em:
+  - C:\Cursor\devai-extension\docs\MIGRATION.md (Tutorial)
+  - C:\Cursor\devai-extension\docs\TROUBLESHOOTING.md (Tutorial)
+  - C:\Cursor\devai-extension\__backup_organizer\docs\MIGRATION.md (Tutorial)
+  - C:\Cursor\devai-extension\__backup_organizer\docs\TROUBLESHOOTING.md (Tutorial)
+
+Atenção: Arquivo referenciado não encontrado: FAQ.md
+  Referenciado em:
+  - C:\Cursor\devai-extension\docs\MIGRATION.md (FAQ)
+  - C:\Cursor\devai-extension\docs\TROUBLESHOOTING.md (FAQ)
+  - C:\Cursor\devai-extension\__backup_organizer\docs\MIGRATION.md (FAQ)
+  - C:\Cursor\devai-extension\__backup_organizer\docs\TROUBLESHOOTING.md (FAQ)
+
+Atenção: Arquivo referenciado não encontrado: TROUBLESHOOTING.md
+  Referenciado em:
+  - C:\Cursor\devai-extension\docs\MIGRATION.md (Troubleshooting)
+  - C:\Cursor\devai-extension\__backup_organizer\docs\MIGRATION.md (Troubleshooting)
+
+Atenção: Arquivo referenciado não encontrado: docs/usage.md
+  Referenciado em:
+  - C:\Cursor\devai-extension\README.md (Guia de Uso)
+  - C:\Cursor\devai-extension\__backup_organizer\README.md (Guia de Uso)
+
+Atenção: Arquivo referenciado não encontrado: docs/security-guide.md
+  Referenciado em:
+  - C:\Cursor\devai-extension\SECURITY.md (Guia de Segurança)
+  - C:\Cursor\devai-extension\__backup_organizer\SECURITY.md (Guia de Segurança)
+
+Atenção: Arquivo referenciado não encontrado: docs/best-practices.md
+  Referenciado em:
+  - C:\Cursor\devai-extension\SECURITY.md (Boas Práticas)
+  - C:\Cursor\devai-extension\__backup_organizer\SECURITY.md (Boas Práticas)
+
+Atenção: Arquivo referenciado não encontrado: docs/security-faq.md
+  Referenciado em:
+  - C:\Cursor\devai-extension\SECURITY.md (FAQ de Segurança)
+  - C:\Cursor\devai-extension\__backup_organizer\SECURITY.md (FAQ de Segurança)
+
 Verificando arquivos duplicados...
+Removido arquivo duplicado: C:\Cursor\devai-extension\docs\CHANGELOG.md
 Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\CHANGELOG.md
+Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\docs\CHANGELOG.md
 Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\CODE_OF_CONDUCT.md
+Removido arquivo duplicado: C:\Cursor\devai-extension\docs\CONTRIBUTING.md
 Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\CONTRIBUTING.md
+Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\docs\CONTRIBUTING.md
+Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\docs\EXAMPLES.md
+Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\docs\FAQ.md
+Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\docs\FLUXOGRAMA.md
+Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\docs\IMPLEMENTACAO.md
+Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\docs\MIGRATION.md
+Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\docs\ONBOARDING.md
+Removido arquivo duplicado: C:\Cursor\devai-extension\docs\ROADMAP.md
+Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\docs\ROADMAP.md
+Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\ROADMAP.md
+Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\docs\TROUBLESHOOTING.md
+Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\docs\TUTORIAL.md
 Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\README.md
 Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\relatorio-extensoes.txt
 Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\relatorio-github.txt
 Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\relatorio-organizacao.txt
 Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\relatorio-testes-extensoes.txt
 Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\relatorio-testes.txt
-Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\ROADMAP.md
 Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\SECURITY.md
 
 === Relatório de Arquivos Duplicados ===
 
-DOCS (11 arquivos):
+DOCS (19 arquivos):
 
   CHANGELOG.md:
     - C:\Cursor\devai-extension\CHANGELOG.md
+    - C:\Cursor\devai-extension\docs\CHANGELOG.md
     - C:\Cursor\devai-extension\__backup_organizer\CHANGELOG.md
+    - C:\Cursor\devai-extension\__backup_organizer\docs\CHANGELOG.md
 
   CODE_OF_CONDUCT.md:
     - C:\Cursor\devai-extension\CODE_OF_CONDUCT.md
@@ -31,7 +160,47 @@ DOCS (11 arquivos):
 
   CONTRIBUTING.md:
     - C:\Cursor\devai-extension\CONTRIBUTING.md
+    - C:\Cursor\devai-extension\docs\CONTRIBUTING.md
     - C:\Cursor\devai-extension\__backup_organizer\CONTRIBUTING.md
+    - C:\Cursor\devai-extension\__backup_organizer\docs\CONTRIBUTING.md
+
+  EXAMPLES.md:
+    - C:\Cursor\devai-extension\docs\EXAMPLES.md
+    - C:\Cursor\devai-extension\__backup_organizer\docs\EXAMPLES.md
+
+  FAQ.md:
+    - C:\Cursor\devai-extension\docs\FAQ.md
+    - C:\Cursor\devai-extension\__backup_organizer\docs\FAQ.md
+
+  FLUXOGRAMA.md:
+    - C:\Cursor\devai-extension\docs\FLUXOGRAMA.md
+    - C:\Cursor\devai-extension\__backup_organizer\docs\FLUXOGRAMA.md
+
+  IMPLEMENTACAO.md:
+    - C:\Cursor\devai-extension\docs\IMPLEMENTACAO.md
+    - C:\Cursor\devai-extension\__backup_organizer\docs\IMPLEMENTACAO.md
+
+  MIGRATION.md:
+    - C:\Cursor\devai-extension\docs\MIGRATION.md
+    - C:\Cursor\devai-extension\__backup_organizer\docs\MIGRATION.md
+
+  ONBOARDING.md:
+    - C:\Cursor\devai-extension\docs\ONBOARDING.md
+    - C:\Cursor\devai-extension\__backup_organizer\docs\ONBOARDING.md
+
+  ROADMAP.md:
+    - C:\Cursor\devai-extension\docs\ROADMAP.md
+    - C:\Cursor\devai-extension\ROADMAP.md
+    - C:\Cursor\devai-extension\__backup_organizer\docs\ROADMAP.md
+    - C:\Cursor\devai-extension\__backup_organizer\ROADMAP.md
+
+  TROUBLESHOOTING.md:
+    - C:\Cursor\devai-extension\docs\TROUBLESHOOTING.md
+    - C:\Cursor\devai-extension\__backup_organizer\docs\TROUBLESHOOTING.md
+
+  TUTORIAL.md:
+    - C:\Cursor\devai-extension\docs\TUTORIAL.md
+    - C:\Cursor\devai-extension\__backup_organizer\docs\TUTORIAL.md
 
   README.md:
     - C:\Cursor\devai-extension\README.md
@@ -56,10 +225,6 @@ DOCS (11 arquivos):
   relatorio-testes.txt:
     - C:\Cursor\devai-extension\relatorio-testes.txt
     - C:\Cursor\devai-extension\__backup_organizer\relatorio-testes.txt
-
-  ROADMAP.md:
-    - C:\Cursor\devai-extension\ROADMAP.md
-    - C:\Cursor\devai-extension\__backup_organizer\ROADMAP.md
 
   SECURITY.md:
     - C:\Cursor\devai-extension\SECURITY.md
@@ -271,7 +436,7 @@ SOURCE (22 arquivos):
     - C:\Cursor\devai-extension\src\ui\aiPanel.ts
     - C:\Cursor\devai-extension\__backup_organizer\__backup_organizer\src\ui\aiPanel.ts
 
-OUTROS (16 arquivos):
+OUTROS (20 arquivos):
 
   .editorconfig:
     - C:\Cursor\devai-extension\.editorconfig
@@ -339,28 +504,41 @@ OUTROS (16 arquivos):
     - C:\Cursor\devai-extension\LICENSE
     - C:\Cursor\devai-extension\__backup_organizer\LICENSE
 
-Total de arquivos duplicados encontrados: 75
+  icon.ico:
+    - C:\Cursor\devai-extension\media\icon.ico
+    - C:\Cursor\devai-extension\__backup_organizer\media\icon.ico
+
+  icon.png:
+    - C:\Cursor\devai-extension\media\icon.png
+    - C:\Cursor\devai-extension\__backup_organizer\media\icon.png
+
+  devai.ico:
+    - C:\Cursor\devai-extension\media\icons\devai.ico
+    - C:\Cursor\devai-extension\__backup_organizer\media\icons\devai.ico
+
+  devai.png:
+    - C:\Cursor\devai-extension\media\icons\devai.png
+    - C:\Cursor\devai-extension\__backup_organizer\media\icons\devai.png
+
+Total de arquivos duplicados encontrados: 87
 
 Resumo por tipo:
-- docs: 11 arquivos
+- docs: 19 arquivos
 - config: 4 arquivos
 - build: 22 arquivos
 - source: 22 arquivos
-- outros: 16 arquivos
+- outros: 20 arquivos
 Validação: Projeto compilou com sucesso.
 
 Atualizando documentação...
 README.md atualizado com nova data.
 ROADMAP.md atualizado com nova data.
-CHANGELOG.md atualizado com nova data.
-CONTRIBUTING.md atualizado com nova data.
 EXAMPLES.md atualizado com nova data.
 FAQ.md atualizado com nova data.
 FLUXOGRAMA.md atualizado com nova data.
 IMPLEMENTACAO.md atualizado com nova data.
 MIGRATION.md atualizado com nova data.
 ONBOARDING.md atualizado com nova data.
-ROADMAP.md atualizado com nova data.
 TROUBLESHOOTING.md atualizado com nova data.
 TUTORIAL.md atualizado com nova data.
 

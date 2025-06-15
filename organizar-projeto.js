@@ -127,7 +127,96 @@ function verificarReferenciasCruzadas() {
     }
 }
 
-// Nova função para verificar arquivos duplicados
+// Nova função para analisar arquivo
+function analisarArquivo(caminho) {
+    const conteudo = fs.readFileSync(caminho, 'utf8');
+    const stats = fs.statSync(caminho);
+
+    return {
+        caminho,
+        tamanho: stats.size,
+        linhas: conteudo.split('\n').length,
+        ultimaModificacao: stats.mtime,
+        conteudo,
+        // Análise de conteúdo
+        temLinks: conteudo.includes(']('),
+        temTabelas: conteudo.includes('|'),
+        temCodigo: conteudo.includes('```'),
+        temImagens: conteudo.includes('!['),
+        temTitulos: conteudo.match(/^#{1,6}\s/gm)?.length || 0,
+        temListas: conteudo.match(/^[-*]\s/gm)?.length || 0,
+        // Análise de estrutura
+        temSecoes: conteudo.match(/^#{2,}\s/gm)?.length || 0,
+        temExemplos: conteudo.includes('Exemplo:') || conteudo.includes('Example:'),
+        temNotas: conteudo.includes('Nota:') || conteudo.includes('Note:'),
+        temAvisos: conteudo.includes('Aviso:') || conteudo.includes('Warning:'),
+        temReferencias: conteudo.includes('Referência:') || conteudo.includes('Reference:'),
+        // Análise de qualidade
+        temDataAtualizacao: conteudo.includes('Última atualização:'),
+        temVersao: conteudo.includes('Versão:') || conteudo.includes('Version:'),
+        temAutores: conteudo.includes('Autor:') || conteudo.includes('Author:'),
+        temLicenca: conteudo.includes('Licença:') || conteudo.includes('License:'),
+    };
+}
+
+// Nova função para comparar arquivos
+function compararArquivos(arquivo1, arquivo2) {
+    const analise1 = analisarArquivo(arquivo1);
+    const analise2 = analisarArquivo(arquivo2);
+
+    // Pontuação baseada em critérios
+    let pontos1 = 0;
+    let pontos2 = 0;
+
+    // Critérios de pontuação
+    const criterios = {
+        tamanho: 2, // Arquivo maior
+        linhas: 2, // Mais linhas
+        temLinks: 3, // Tem links
+        temTabelas: 2, // Tem tabelas
+        temCodigo: 2, // Tem exemplos de código
+        temImagens: 2, // Tem imagens
+        temTitulos: 1, // Tem títulos
+        temListas: 1, // Tem listas
+        temSecoes: 2, // Tem seções
+        temExemplos: 3, // Tem exemplos
+        temNotas: 2, // Tem notas
+        temAvisos: 2, // Tem avisos
+        temReferencias: 2, // Tem referências
+        temDataAtualizacao: 2, // Tem data de atualização
+        temVersao: 2, // Tem versão
+        temAutores: 1, // Tem autores
+        temLicenca: 1, // Tem licença
+    };
+
+    // Calcula pontos para cada arquivo
+    for (const [criterio, peso] of Object.entries(criterios)) {
+        if (analise1[criterio]) pontos1 += peso;
+        if (analise2[criterio]) pontos2 += peso;
+    }
+
+    // Arquivo mais recente ganha pontos extras
+    if (analise1.ultimaModificacao > analise2.ultimaModificacao) {
+        pontos1 += 5;
+    } else if (analise2.ultimaModificacao > analise1.ultimaModificacao) {
+        pontos2 += 5;
+    }
+
+    // Arquivo na raiz ganha pontos extras
+    if (path.dirname(arquivo1) === raiz) pontos1 += 3;
+    if (path.dirname(arquivo2) === raiz) pontos2 += 3;
+
+    return {
+        melhor: pontos1 >= pontos2 ? arquivo1 : arquivo2,
+        pior: pontos1 >= pontos2 ? arquivo2 : arquivo1,
+        analise1,
+        analise2,
+        pontos1,
+        pontos2,
+    };
+}
+
+// Modificar a função verificarDuplicados para usar a nova análise
 function verificarDuplicados() {
     const arquivos = listarArquivos(raiz);
     const arquivosPorNome = new Map();
@@ -173,36 +262,45 @@ function verificarDuplicados() {
                 extensao,
             });
 
-            // Para documentação, mantém o da raiz ou o mais completo
+            // Para documentação, analisa qual arquivo manter
             if (tipo === 'docs') {
-                const arquivoRaiz = caminhos.find((p) => path.dirname(p) === raiz);
-                if (arquivoRaiz) {
-                    // Mantém o da raiz, remove os outros
-                    for (const caminho of caminhos) {
-                        if (caminho !== arquivoRaiz) {
-                            backupArquivo(caminho);
-                            removerArquivo(caminho);
-                            relatorio.push(`Removido arquivo duplicado: ${caminho}`);
-                        }
-                    }
-                } else {
-                    // Se não tem na raiz, mantém o mais completo
-                    let maiorArquivo = caminhos[0];
-                    let maiorTamanho = fs.statSync(maiorArquivo).size;
+                // Compara os arquivos dois a dois
+                let melhorArquivo = caminhos[0];
+                for (let i = 1; i < caminhos.length; i++) {
+                    const comparacao = compararArquivos(melhorArquivo, caminhos[i]);
+                    melhorArquivo = comparacao.melhor;
 
-                    for (const caminho of caminhos.slice(1)) {
-                        const tamanho = fs.statSync(caminho).size;
-                        if (tamanho > maiorTamanho) {
-                            backupArquivo(maiorArquivo);
-                            removerArquivo(maiorArquivo);
-                            relatorio.push(`Removido arquivo duplicado: ${maiorArquivo}`);
-                            maiorArquivo = caminho;
-                            maiorTamanho = tamanho;
-                        } else {
-                            backupArquivo(caminho);
-                            removerArquivo(caminho);
-                            relatorio.push(`Removido arquivo duplicado: ${caminho}`);
-                        }
+                    // Adiciona análise ao relatório
+                    relatorio.push(`\nAnálise de ${nome}:`);
+                    relatorio.push(`  Melhor: ${comparacao.melhor} (${comparacao.pontos1} pontos)`);
+                    relatorio.push(`  Pior: ${comparacao.pior} (${comparacao.pontos2} pontos)`);
+                    relatorio.push('  Critérios:');
+                    relatorio.push(
+                        `    - Tamanho: ${comparacao.analise1.tamanho} vs ${comparacao.analise2.tamanho} bytes`
+                    );
+                    relatorio.push(
+                        `    - Linhas: ${comparacao.analise1.linhas} vs ${comparacao.analise2.linhas}`
+                    );
+                    relatorio.push(
+                        `    - Seções: ${comparacao.analise1.temSecoes} vs ${comparacao.analise2.temSecoes}`
+                    );
+                    relatorio.push(
+                        `    - Links: ${comparacao.analise1.temLinks} vs ${comparacao.analise2.temLinks}`
+                    );
+                    relatorio.push(
+                        `    - Exemplos: ${comparacao.analise1.temExemplos} vs ${comparacao.analise2.temExemplos}`
+                    );
+                    relatorio.push(
+                        `    - Última modificação: ${comparacao.analise1.ultimaModificacao} vs ${comparacao.analise2.ultimaModificacao}`
+                    );
+                }
+
+                // Remove os arquivos piores
+                for (const caminho of caminhos) {
+                    if (caminho !== melhorArquivo) {
+                        backupArquivo(caminho);
+                        removerArquivo(caminho);
+                        relatorio.push(`Removido arquivo duplicado: ${caminho}`);
                     }
                 }
             }
