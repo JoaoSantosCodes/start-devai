@@ -93,7 +93,13 @@ function limparBackup() {
 function verificarDuplicados() {
     const arquivos = listarArquivos(raiz);
     const arquivosPorNome = new Map();
-    const duplicados = [];
+    const duplicados = {
+        docs: [],
+        config: [],
+        build: [],
+        source: [],
+        outros: []
+    };
 
     // Primeiro, agrupa arquivos por nome
     for (const item of arquivos) {
@@ -108,13 +114,30 @@ function verificarDuplicados() {
     // Depois, verifica duplicados
     for (const [nome, caminhos] of arquivosPorNome) {
         if (caminhos.length > 1) {
-            // Verifica se é um arquivo de documentação
             const extensao = path.extname(nome).toLowerCase();
-            const isDoc = ['.md', '.txt', '.rst'].includes(extensao);
+            
+            // Classifica o tipo de arquivo
+            let tipo = 'outros';
+            if (['.md', '.txt', '.rst'].includes(extensao)) {
+                tipo = 'docs';
+            } else if (['.json', '.config', '.rc', '.ini', '.yml', '.yaml'].includes(extensao)) {
+                tipo = 'config';
+            } else if (['.js', '.d.ts', '.js.map', '.py', '.bat', '.ps1'].includes(extensao)) {
+                tipo = 'build';
+            } else if (['.ts', '.tsx', '.jsx'].includes(extensao)) {
+                tipo = 'source';
+            }
 
-            if (isDoc) {
-                // Para documentação, mantém o da raiz ou o mais completo
-                const arquivoRaiz = caminhos.find((p) => path.dirname(p) === raiz);
+            // Adiciona aos duplicados do tipo correspondente
+            duplicados[tipo].push({
+                nome,
+                caminhos,
+                extensao
+            });
+
+            // Para documentação, mantém o da raiz ou o mais completo
+            if (tipo === 'docs') {
+                const arquivoRaiz = caminhos.find(p => path.dirname(p) === raiz);
                 if (arquivoRaiz) {
                     // Mantém o da raiz, remove os outros
                     for (const caminho of caminhos) {
@@ -122,35 +145,43 @@ function verificarDuplicados() {
                             backupArquivo(caminho);
                             removerArquivo(caminho);
                             relatorio.push(`Removido arquivo duplicado: ${caminho}`);
-                            duplicados.push(caminho);
                         }
                     }
                 } else {
                     // Se não tem na raiz, mantém o mais completo
                     let maiorArquivo = caminhos[0];
                     let maiorTamanho = fs.statSync(maiorArquivo).size;
-
+                    
                     for (const caminho of caminhos.slice(1)) {
                         const tamanho = fs.statSync(caminho).size;
                         if (tamanho > maiorTamanho) {
                             backupArquivo(maiorArquivo);
                             removerArquivo(maiorArquivo);
                             relatorio.push(`Removido arquivo duplicado: ${maiorArquivo}`);
-                            duplicados.push(maiorArquivo);
                             maiorArquivo = caminho;
                             maiorTamanho = tamanho;
                         } else {
                             backupArquivo(caminho);
                             removerArquivo(caminho);
                             relatorio.push(`Removido arquivo duplicado: ${caminho}`);
-                            duplicados.push(caminho);
                         }
                     }
                 }
-            } else {
-                // Para outros tipos de arquivo, apenas reporta
-                relatorio.push(`Atenção: Arquivo duplicado encontrado: ${nome}`);
-                relatorio.push(`  Localizações: ${caminhos.join(', ')}`);
+            }
+        }
+    }
+
+    // Gera relatório detalhado
+    relatorio.push('\n=== Relatório de Arquivos Duplicados ===');
+    
+    for (const [tipo, lista] of Object.entries(duplicados)) {
+        if (lista.length > 0) {
+            relatorio.push(`\n${tipo.toUpperCase()} (${lista.length} arquivos):`);
+            for (const item of lista) {
+                relatorio.push(`\n  ${item.nome}:`);
+                for (const caminho of item.caminhos) {
+                    relatorio.push(`    - ${caminho}`);
+                }
             }
         }
     }
@@ -338,14 +369,22 @@ function main() {
         backupProjeto();
         organizarEstrutura();
         atualizarIgnores();
-
+        
         // Verificar duplicados
         relatorio.push('\nVerificando arquivos duplicados...');
         const duplicados = verificarDuplicados();
-        if (duplicados.length > 0) {
-            relatorio.push(`Encontrados ${duplicados.length} arquivos duplicados.`);
-        } else {
-            relatorio.push('Nenhum arquivo duplicado encontrado.');
+        
+        // Resumo de duplicados
+        const totalDuplicados = Object.values(duplicados).reduce((acc, curr) => acc + curr.length, 0);
+        relatorio.push(`\nTotal de arquivos duplicados encontrados: ${totalDuplicados}`);
+        
+        if (totalDuplicados > 0) {
+            relatorio.push('\nResumo por tipo:');
+            for (const [tipo, lista] of Object.entries(duplicados)) {
+                if (lista.length > 0) {
+                    relatorio.push(`- ${tipo}: ${lista.length} arquivos`);
+                }
+            }
         }
 
         if (!validarProjeto()) {
@@ -356,10 +395,10 @@ function main() {
         } else {
             // Atualizar documentação
             atualizarDocumentacao();
-
+            
             // Atualizar GitHub
             atualizarGitHub();
-
+            
             limparBackup();
             relatorio.push('Organização concluída com sucesso.');
         }
@@ -374,3 +413,4 @@ function main() {
 }
 
 main();
+
