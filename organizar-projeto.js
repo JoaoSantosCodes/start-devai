@@ -89,6 +89,75 @@ function limparBackup() {
     removerArquivo(backupDir);
 }
 
+// Nova função para verificar arquivos duplicados
+function verificarDuplicados() {
+    const arquivos = listarArquivos(raiz);
+    const arquivosPorNome = new Map();
+    const duplicados = [];
+
+    // Primeiro, agrupa arquivos por nome
+    for (const item of arquivos) {
+        if (item.type !== 'file') continue;
+        const nome = path.basename(item.path);
+        if (!arquivosPorNome.has(nome)) {
+            arquivosPorNome.set(nome, []);
+        }
+        arquivosPorNome.get(nome).push(item.path);
+    }
+
+    // Depois, verifica duplicados
+    for (const [nome, caminhos] of arquivosPorNome) {
+        if (caminhos.length > 1) {
+            // Verifica se é um arquivo de documentação
+            const extensao = path.extname(nome).toLowerCase();
+            const isDoc = ['.md', '.txt', '.rst'].includes(extensao);
+
+            if (isDoc) {
+                // Para documentação, mantém o da raiz ou o mais completo
+                const arquivoRaiz = caminhos.find((p) => path.dirname(p) === raiz);
+                if (arquivoRaiz) {
+                    // Mantém o da raiz, remove os outros
+                    for (const caminho of caminhos) {
+                        if (caminho !== arquivoRaiz) {
+                            backupArquivo(caminho);
+                            removerArquivo(caminho);
+                            relatorio.push(`Removido arquivo duplicado: ${caminho}`);
+                            duplicados.push(caminho);
+                        }
+                    }
+                } else {
+                    // Se não tem na raiz, mantém o mais completo
+                    let maiorArquivo = caminhos[0];
+                    let maiorTamanho = fs.statSync(maiorArquivo).size;
+
+                    for (const caminho of caminhos.slice(1)) {
+                        const tamanho = fs.statSync(caminho).size;
+                        if (tamanho > maiorTamanho) {
+                            backupArquivo(maiorArquivo);
+                            removerArquivo(maiorArquivo);
+                            relatorio.push(`Removido arquivo duplicado: ${maiorArquivo}`);
+                            duplicados.push(maiorArquivo);
+                            maiorArquivo = caminho;
+                            maiorTamanho = tamanho;
+                        } else {
+                            backupArquivo(caminho);
+                            removerArquivo(caminho);
+                            relatorio.push(`Removido arquivo duplicado: ${caminho}`);
+                            duplicados.push(caminho);
+                        }
+                    }
+                }
+            } else {
+                // Para outros tipos de arquivo, apenas reporta
+                relatorio.push(`Atenção: Arquivo duplicado encontrado: ${nome}`);
+                relatorio.push(`  Localizações: ${caminhos.join(', ')}`);
+            }
+        }
+    }
+
+    return duplicados;
+}
+
 // 1. Backup dos arquivos relevantes
 function backupProjeto() {
     if (fs.existsSync(backupDir)) limparBackup();
@@ -179,36 +248,128 @@ function validarProjeto() {
     }
 }
 
+// Nova função para atualizar documentação
+function atualizarDocumentacao() {
+    relatorio.push('\nAtualizando documentação...');
+
+    // Atualizar README.md
+    const readmePath = path.join(raiz, 'README.md');
+    if (fs.existsSync(readmePath)) {
+        const readme = fs.readFileSync(readmePath, 'utf8');
+        const dataAtualizacao = new Date().toISOString().split('T')[0];
+
+        // Atualizar data de última atualização
+        const readmeAtualizado = readme.replace(
+            /Última atualização:.*/,
+            `Última atualização: ${dataAtualizacao}`
+        );
+
+        fs.writeFileSync(readmePath, readmeAtualizado, 'utf8');
+        relatorio.push('README.md atualizado com nova data.');
+    }
+
+    // Atualizar ROADMAP.md
+    const roadmapPath = path.join(raiz, 'ROADMAP.md');
+    if (fs.existsSync(roadmapPath)) {
+        const roadmap = fs.readFileSync(roadmapPath, 'utf8');
+        const dataAtualizacao = new Date().toISOString().split('T')[0];
+
+        // Atualizar data de última atualização
+        const roadmapAtualizado = roadmap.replace(
+            /Última atualização:.*/,
+            `Última atualização: ${dataAtualizacao}`
+        );
+
+        fs.writeFileSync(roadmapPath, roadmapAtualizado, 'utf8');
+        relatorio.push('ROADMAP.md atualizado com nova data.');
+    }
+
+    // Atualizar documentação em docs/
+    const docsDir = path.join(raiz, 'docs');
+    if (fs.existsSync(docsDir)) {
+        const arquivos = fs.readdirSync(docsDir);
+        for (const arquivo of arquivos) {
+            if (arquivo.endsWith('.md')) {
+                const docPath = path.join(docsDir, arquivo);
+                const conteudo = fs.readFileSync(docPath, 'utf8');
+                const dataAtualizacao = new Date().toISOString().split('T')[0];
+
+                // Atualizar data de última atualização
+                const conteudoAtualizado = conteudo.replace(
+                    /Última atualização:.*/,
+                    `Última atualização: ${dataAtualizacao}`
+                );
+
+                fs.writeFileSync(docPath, conteudoAtualizado, 'utf8');
+                relatorio.push(`${arquivo} atualizado com nova data.`);
+            }
+        }
+    }
+}
+
+// Nova função para atualizar GitHub
+function atualizarGitHub() {
+    relatorio.push('\nAtualizando GitHub...');
+
+    try {
+        // Verificar status do git
+        execSync('git status', { stdio: 'inherit' });
+
+        // Adicionar todas as alterações
+        execSync('git add .', { stdio: 'inherit' });
+
+        // Commit com mensagem descritiva
+        const data = new Date().toISOString().split('T')[0];
+        execSync(`git commit -m "chore: atualização automática ${data}"`, { stdio: 'inherit' });
+
+        // Push para o repositório remoto
+        execSync('git push', { stdio: 'inherit' });
+
+        relatorio.push('GitHub atualizado com sucesso.');
+    } catch (e) {
+        relatorio.push(`Erro ao atualizar GitHub: ${e.message}`);
+        throw e;
+    }
+}
+
 // 5. Execução principal
 function main() {
     try {
         backupProjeto();
         organizarEstrutura();
         atualizarIgnores();
+
+        // Verificar duplicados
+        relatorio.push('\nVerificando arquivos duplicados...');
+        const duplicados = verificarDuplicados();
+        if (duplicados.length > 0) {
+            relatorio.push(`Encontrados ${duplicados.length} arquivos duplicados.`);
+        } else {
+            relatorio.push('Nenhum arquivo duplicado encontrado.');
+        }
+
         if (!validarProjeto()) {
             restaurarBackup();
             relatorio.push(
                 'Backup restaurado devido a erro. Nenhuma alteração permanente foi feita.'
             );
         } else {
-            limparBackup();
-            relatorio.push('Organização concluída com sucesso.');
+            // Atualizar documentação
+            atualizarDocumentacao();
 
             // Atualizar GitHub
-            relatorio.push('\nIniciando atualização do GitHub...');
-            try {
-                require('./atualizar-github.js');
-            } catch (e) {
-                relatorio.push(`Erro ao atualizar GitHub: ${e.message}`);
-            }
+            atualizarGitHub();
+
+            limparBackup();
+            relatorio.push('Organização concluída com sucesso.');
         }
-    } catch (e) {
-        restaurarBackup();
-        relatorio.push('Erro inesperado. Backup restaurado.');
-        relatorio.push(e.toString());
-    } finally {
+
+        // Salvar relatório
         fs.writeFileSync('relatorio-organizacao.txt', relatorio.join('\n'), 'utf8');
-        console.log('Relatório gerado em relatorio-organizacao.txt');
+        console.log('Relatório salvo em relatorio-organizacao.txt');
+    } catch (e) {
+        console.error('Erro:', e);
+        restaurarBackup();
     }
 }
 

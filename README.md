@@ -71,11 +71,11 @@ npm run compile
 
 ### Comandos da Extensão (VS Code)
 
-- `DevAI: Validar Extensões` — Detecta e sugere perfis inteligentes para o projeto
-- `DevAI: Organizar Extensões` — Gera relatório, recomenda, ativa/desativa e instala extensões
-- `DevAI: Analisar Desempenho` — Mostra relatório de uso de recursos e sugestões de otimização
-- `DevAI: Criar/Aplicar/Excluir Perfil de Extensões` — Gerencia perfis personalizados
-- `DevAI: Gerenciar Grupos de Extensões` — Ativa/desativa grupos de extensões por categoria
+-   `DevAI: Validar Extensões` — Detecta e sugere perfis inteligentes para o projeto
+-   `DevAI: Organizar Extensões` — Gera relatório, recomenda, ativa/desativa e instala extensões
+-   `DevAI: Analisar Desempenho` — Mostra relatório de uso de recursos e sugestões de otimização
+-   `DevAI: Criar/Aplicar/Excluir Perfil de Extensões` — Gerencia perfis personalizados
+-   `DevAI: Gerenciar Grupos de Extensões` — Ativa/desativa grupos de extensões por categoria
 
 ### Scripts de Organização
 
