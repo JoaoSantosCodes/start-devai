@@ -1,0 +1,75 @@
+Iniciando validação de extensões...
+
+1. Extensões instaladas:
+
+2. Analisando dependências do projeto...
+Dependências de desenvolvimento:
+- @types/glob
+- @types/mocha
+- @types/node
+- @types/vscode
+- @typescript-eslint/eslint-plugin
+- @typescript-eslint/parser
+- @vscode/test-electron
+- eslint
+- glob
+- mocha
+- typescript
+
+Dependências de produção:
+- axios
+
+3. Extensões necessárias:
+✅ dbaeumer.vscode-eslint - Instalada
+✅ esbenp.prettier-vscode - Instalada
+❌ ms-vscode.vscode-typescript-tslint-plugin - Não instalada
+✅ vscode-icons-team.vscode-icons - Instalada
+
+4. Extensões recomendadas:
+⚠️ ms-vscode.test-adapter-converter - Não instalada (opcional)
+⚠️ hbenl.vscode-test-explorer - Não instalada (opcional)
+✅ ms-vscode.vscode-typescript-next - Instalada
+
+5. Extensões potencialmente desnecessárias:
+⚠️ eamodio.gitlens - Pode ser desinstalada
+⚠️ github.vscode-github-actions - Pode ser desinstalada
+⚠️ github.vscode-pull-request-github - Pode ser desinstalada
+⚠️ knisterpeter.vscode-github - Pode ser desinstalada
+⚠️ ms-azuretools.vscode-containers - Pode ser desinstalada
+⚠️ ms-azuretools.vscode-docker - Pode ser desinstalada
+⚠️ ms-python.black-formatter - Pode ser desinstalada
+⚠️ ms-python.debugpy - Pode ser desinstalada
+⚠️ ms-python.pylint - Pode ser desinstalada
+⚠️ ms-python.python - Pode ser desinstalada
+⚠️ ms-python.vscode-pylance - Pode ser desinstalada
+⚠️ ms-vscode-remote.remote-containers - Pode ser desinstalada
+⚠️ ms-vscode.makefile-tools - Pode ser desinstalada
+⚠️ ms-vscode.powershell - Pode ser desinstalada
+⚠️ ritwickdey.liveserver - Pode ser desinstalada
+⚠️ streetsidesoftware.code-spell-checker - Pode ser desinstalada
+⚠️ yzhang.markdown-all-in-one - Pode ser desinstalada
+
+6. Comandos para ajustar extensões:
+code --install-extension ms-vscode.vscode-typescript-tslint-plugin
+code --uninstall-extension eamodio.gitlens
+code --uninstall-extension github.vscode-github-actions
+code --uninstall-extension github.vscode-pull-request-github
+code --uninstall-extension knisterpeter.vscode-github
+code --uninstall-extension ms-azuretools.vscode-containers
+code --uninstall-extension ms-azuretools.vscode-docker
+code --uninstall-extension ms-python.black-formatter
+code --uninstall-extension ms-python.debugpy
+code --uninstall-extension ms-python.pylint
+code --uninstall-extension ms-python.python
+code --uninstall-extension ms-python.vscode-pylance
+code --uninstall-extension ms-vscode-remote.remote-containers
+code --uninstall-extension ms-vscode.makefile-tools
+code --uninstall-extension ms-vscode.powershell
+code --uninstall-extension ritwickdey.liveserver
+code --uninstall-extension streetsidesoftware.code-spell-checker
+code --uninstall-extension yzhang.markdown-all-in-one
+
+7. Resumo:
+❌ Algumas extensões necessárias estão faltando!
+Extensões faltantes:
+- ms-vscode.vscode-typescript-tslint-plugin

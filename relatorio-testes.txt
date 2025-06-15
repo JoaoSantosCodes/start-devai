@@ -1,0 +1,20 @@
+Iniciando testes da extensão...
+
+1. Compilando projeto...
+
+2. Verificando estrutura...
+✅ dist/extension.js encontrado
+✅ src/core/aiManager.ts encontrado
+✅ src/core/logger.ts encontrado
+✅ src/core/setup_manager.ts encontrado
+✅ src/ui/aiPanel.ts encontrado
+
+3. Verificando dependências...
+
+4. Verificando configuração...
+Nome: devai-assistant
+Versão: 1.0.0
+Comandos: 4
+
+5. Resultado dos testes:
+✅ Todos os testes passaram!

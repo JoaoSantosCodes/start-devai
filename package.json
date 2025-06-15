@@ -1,8 +1,8 @@
 {
     "name": "devai-assistant",
     "displayName": "DevAI Assistant",
-    "description": "VS Code extension integrating AI assistants for development",
-    "version": "1.0.0",
+    "description": "Assistente inteligente para desenvolvimento",
+    "version": "0.0.1",
     "icon": "extension/media/icons/devai.png",
     "repository": {
         "type": "git",
@@ -15,57 +15,100 @@
         "Other"
     ],
     "activationEvents": [
-        "onStartupFinished"
+        "onCommand:devai.validateExtensions",
+        "onCommand:devai.analyzePerformance",
+        "onCommand:devai.createProfile",
+        "onCommand:devai.applyProfile",
+        "onCommand:devai.deleteProfile",
+        "onCommand:devai.organizeExtensions",
+        "onCommand:devai.manageExtensionGroups"
     ],
-    "main": "./dist/extension.js",
+    "main": "./out/extension.js",
     "contributes": {
         "commands": [
             {
-                "command": "devai-assistant.start",
-                "title": "DevAI: Start Assistant"
+                "command": "devai.validateExtensions",
+                "title": "DevAI: Validar Extensões",
+                "category": "DevAI"
             },
             {
-                "command": "devai-assistant.stop",
-                "title": "DevAI: Stop Assistant"
+                "command": "devai.analyzePerformance",
+                "title": "DevAI: Analisar Desempenho",
+                "category": "DevAI"
             },
             {
-                "command": "devai-assistant.configure",
-                "title": "DevAI: Configure Assistant"
+                "command": "devai.createProfile",
+                "title": "DevAI: Criar Perfil de Extensões",
+                "category": "DevAI"
             },
             {
-                "command": "devai-assistant.togglePanel",
-                "title": "DevAI: Toggle Assistant Panel"
+                "command": "devai.applyProfile",
+                "title": "DevAI: Aplicar Perfil de Extensões",
+                "category": "DevAI"
+            },
+            {
+                "command": "devai.deleteProfile",
+                "title": "DevAI: Excluir Perfil de Extensões",
+                "category": "DevAI"
+            },
+            {
+                "command": "devai.organizeExtensions",
+                "title": "DevAI: Organizar Extensões",
+                "category": "DevAI"
+            },
+            {
+                "command": "devai.manageExtensionGroups",
+                "title": "DevAI: Gerenciar Grupos de Extensões",
+                "category": "DevAI"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "devai.validateExtensions",
+                "key": "ctrl+shift+v",
+                "mac": "cmd+shift+v",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "devai.analyzePerformance",
+                "key": "ctrl+shift+p",
+                "mac": "cmd+shift+p",
+                "when": "editorTextFocus"
             }
         ],
         "configuration": {
             "title": "DevAI Assistant",
             "properties": {
-                "devai-assistant.autoStart": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "Automatically start the assistant when VS Code starts"
-                },
-                "devai-assistant.model": {
+                "devai.apiKey": {
                     "type": "string",
-                    "default": "llama2",
-                    "enum": [
-                        "llama2",
-                        "codellama",
-                        "mistral"
-                    ],
-                    "description": "The AI model to use"
+                    "default": "",
+                    "description": "Chave da API do DevAI"
                 },
-                "devai-assistant.maxTokens": {
+                "devai.model": {
+                    "type": "string",
+                    "default": "gpt-4",
+                    "enum": [
+                        "gpt-4",
+                        "gpt-3.5-turbo"
+                    ],
+                    "description": "Modelo de IA a ser usado"
+                },
+                "devai.maxTokens": {
                     "type": "number",
                     "default": 2000,
-                    "description": "Maximum number of tokens to generate"
+                    "description": "Número máximo de tokens por resposta"
                 },
-                "devai-assistant.temperature": {
+                "devai.temperature": {
                     "type": "number",
                     "default": 0.7,
                     "minimum": 0,
                     "maximum": 1,
-                    "description": "Temperature for text generation (0-1)"
+                    "description": "Temperatura para geração de texto (0 = mais determinístico, 1 = mais criativo)"
+                },
+                "devai.profiles": {
+                    "type": "object",
+                    "default": {},
+                    "description": "Perfis de extensões personalizados"
                 }
             }
         }
@@ -79,17 +122,17 @@
         "test": "node ./out/test/runTest.js"
     },
     "devDependencies": {
+        "@types/vscode": "^1.85.0",
         "@types/glob": "^8.1.0",
         "@types/mocha": "^10.0.6",
         "@types/node": "20.x",
-        "@types/vscode": "^1.85.0",
         "@typescript-eslint/eslint-plugin": "^6.15.0",
         "@typescript-eslint/parser": "^6.15.0",
-        "@vscode/test-electron": "^2.3.8",
         "eslint": "^8.56.0",
         "glob": "^10.3.10",
         "mocha": "^10.2.0",
-        "typescript": "^5.3.3"
+        "typescript": "^5.3.3",
+        "@vscode/test-electron": "^2.3.8"
     },
     "dependencies": {
         "axios": "^1.10.0"

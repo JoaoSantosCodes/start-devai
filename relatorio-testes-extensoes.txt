@@ -1,0 +1,31 @@
+Iniciando testes das funcionalidades...
+
+1. Testando validação de extensões...
+✅ Encontradas 21 extensões instaladas
+✅ dbaeumer.vscode-eslint - Instalada
+✅ esbenp.prettier-vscode - Instalada
+❌ ms-vscode.vscode-typescript-tslint-plugin - Não instalada
+✅ vscode-icons-team.vscode-icons - Instalada
+
+2. Testando análise de desempenho...
+✅ Uso de memória do VS Code: 172.57 MB
+
+3. Testando perfis de extensões...
+⚠️ Nenhum perfil encontrado
+
+4. Verificando comandos registrados...
+✅ 9 comandos registrados:
+  - DevAI: Start Assistant
+  - DevAI: Stop Assistant
+  - DevAI: Configure Assistant
+  - DevAI: Toggle Assistant Panel
+  - DevAI: Validar Extensões
+  - DevAI: Analisar Desempenho
+  - DevAI: Criar Perfil de Extensões
+  - DevAI: Aplicar Perfil de Extensões
+  - DevAI: Excluir Perfil de Extensões
+
+5. Resultado dos testes:
+❌ Testes falharam!
+Erros encontrados:
+❌ ms-vscode.vscode-typescript-tslint-plugin - Não instalada
