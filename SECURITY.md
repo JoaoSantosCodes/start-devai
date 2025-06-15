@@ -1,115 +1,168 @@
 # Política de Segurança
 
-## Versões Suportadas
+Este documento descreve as políticas de segurança do DevAI Extension.
 
-Atualmente, estamos fornecendo atualizações de segurança para as seguintes versões:
+## Vulnerabilidades Conhecidas
 
-| Versão | Suportada          |
-| ------ | ------------------ |
-| 1.0.x  | :white_check_mark: |
-| 0.9.x  | :x:                |
-| 0.8.x  | :x:                |
+### 1. Vulnerabilidades Críticas
 
-## Reportando uma Vulnerabilidade
+-   Nenhuma vulnerabilidade crítica conhecida
 
-### Processo de Reporte
+### 2. Vulnerabilidades de Média Severidade
 
-1. **Não** abra uma issue pública para a vulnerabilidade
-2. Envie um email para [email protegido] com:
-    - Descrição detalhada da vulnerabilidade
-    - Passos para reprodução
-    - Possível impacto
-    - Sugestões de correção (se houver)
+-   Nenhuma vulnerabilidade de média severidade conhecida
 
-### O que esperar
+### 3. Vulnerabilidades de Baixa Severidade
 
-1. **Resposta Inicial**
+-   Nenhuma vulnerabilidade de baixa severidade conhecida
 
-    - Confirmação de recebimento em 48 horas
-    - Avaliação inicial da vulnerabilidade
+## Reportando Vulnerabilidades
 
-2. **Processo de Correção**
+### 1. Processo de Reporte
 
-    - Análise da vulnerabilidade
-    - Desenvolvimento da correção
-    - Testes de segurança
-    - Lançamento da atualização
+1. Não divulgue a vulnerabilidade publicamente
+2. Envie um email para security@devai.com
+3. Inclua detalhes da vulnerabilidade
+4. Aguarde nossa resposta
 
-3. **Comunicação**
-    - Atualizações sobre o progresso
-    - Notificação quando a correção estiver disponível
-    - Crédito no changelog (se desejado)
+### 2. O que Incluir
 
-## Atualizações de Segurança
+-   Descrição da vulnerabilidade
+-   Passos para reprodução
+-   Impacto potencial
+-   Possíveis soluções
 
-### Processo de Atualização
+### 3. Resposta
 
-1. **Identificação**
-
-    - Monitoramento de dependências
-    - Análise de código
-    - Relatórios da comunidade
-
-2. **Priorização**
-
-    - Severidade da vulnerabilidade
-    - Impacto no sistema
-    - Número de usuários afetados
-
-3. **Correção**
-
-    - Desenvolvimento da solução
-    - Testes de segurança
-    - Documentação da correção
-
-4. **Lançamento**
-    - Atualização de versão
-    - Notificação aos usuários
-    - Atualização da documentação
+-   Responderemos em até 48 horas
+-   Manteremos você atualizado
+-   Creditaremos sua descoberta
 
 ## Boas Práticas
 
-### Para Desenvolvedores
+### 1. Desenvolvimento
 
-1. **Código**
+-   Use TypeScript estrito
+-   Siga as convenções de código
+-   Adicione testes de segurança
+-   Revise o código regularmente
 
-    - Siga as melhores práticas de segurança
-    - Use ferramentas de análise estática
-    - Mantenha dependências atualizadas
+### 2. Dependências
 
-2. **Testes**
+-   Mantenha as dependências atualizadas
+-   Use apenas pacotes confiáveis
+-   Verifique as licenças
+-   Monitore vulnerabilidades
 
-    - Inclua testes de segurança
-    - Faça análise de vulnerabilidades
-    - Verifique configurações
+### 3. Configuração
 
-3. **Documentação**
-    - Documente práticas de segurança
-    - Mantenha changelog atualizado
-    - Registre decisões de segurança
+-   Use variáveis de ambiente
+-   Não exponha chaves
+-   Limite permissões
+-   Mantenha logs seguros
 
-### Para Usuários
+## Atualizações de Segurança
 
-1. **Atualizações**
+### 1. Processo
 
-    - Mantenha o software atualizado
-    - Verifique changelog
-    - Aplique patches de segurança
+-   Testes de segurança
+-   Revisão de código
+-   Atualizações de dependências
+-   Correções de vulnerabilidades
 
-2. **Configuração**
+### 2. Notificações
 
-    - Siga as recomendações de segurança
-    - Use configurações seguras
-    - Monitore logs
+-   Email para usuários
+-   Notas de versão
+-   Atualizações automáticas
+-   Documentação atualizada
 
-3. **Reporte**
-    - Reporte vulnerabilidades
-    - Forneça detalhes necessários
-    - Siga o processo de reporte
+### 3. Compatibilidade
+
+-   Manter compatibilidade
+-   Testar atualizações
+-   Documentar mudanças
+-   Fornecer migração
 
 ## Recursos
 
--   [Documentação de Segurança](docs/IMPLEMENTACAO.md#segurança)
--   [Guia de Boas Práticas](CONTRIBUTING.md#segurança)
--   [Changelog](CHANGELOG.md)
--   [Issues de Segurança](https://github.com/JoaoSantosCodes/start-devai/security)
+### 1. Documentação
+
+-   [Guia de Segurança](docs/security-guide.md)
+-   [Boas Práticas](docs/best-practices.md)
+-   [FAQ de Segurança](docs/security-faq.md)
+
+### 2. Ferramentas
+
+-   Analisador de segurança
+-   Scanner de dependências
+-   Monitor de vulnerabilidades
+-   Testes automatizados
+
+### 3. Suporte
+
+-   Email: security@devai.com
+-   GitHub: Issues de segurança
+-   Documentação: Guias de segurança
+
+## Contato
+
+### 1. Equipe de Segurança
+
+-   Email: security@devai.com
+-   GitHub: @devai-security
+-   Twitter: @devai_security
+
+### 2. Horário de Resposta
+
+-   Crítico: 24 horas
+-   Alto: 48 horas
+-   Médio: 72 horas
+-   Baixo: 1 semana
+
+### 3. Canais
+
+-   Email
+-   GitHub
+-   Twitter
+-   Discord
+
+## Histórico de Segurança
+
+### 1. Versão 1.0
+
+-   Lançamento inicial
+-   Sem vulnerabilidades conhecidas
+-   Boas práticas implementadas
+
+### 2. Versão 0.9
+
+-   Correções de segurança
+-   Atualizações de dependências
+-   Melhorias de configuração
+
+### 3. Versão 0.8
+
+-   Primeira versão
+-   Vulnerabilidades corrigidas
+-   Configurações seguras
+
+## Próximos Passos
+
+### 1. Curto Prazo
+
+-   Scanner de dependências
+-   Testes de segurança
+-   Documentação atualizada
+
+### 2. Médio Prazo
+
+-   Análise de código
+-   Monitoramento contínuo
+-   Treinamento de equipe
+
+### 3. Longo Prazo
+
+-   Auditorias regulares
+-   Certificações
+-   Parcerias de segurança
