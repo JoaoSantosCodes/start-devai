@@ -43,7 +43,7 @@ function listarArquivos(dir, lista = []) {
             continue;
         }
         if (stat.isDirectory()) {
-            // Ignorar pastas de sistema, dependências, ambientes virtuais, .vscode, docs e media
+            // Ignorar apenas pastas de sistema, dependências e ambientes virtuais
             if (
                 ![
                     '.git',
@@ -53,8 +53,6 @@ function listarArquivos(dir, lista = []) {
                     'venv',
                     '__pycache__',
                     '.vscode',
-                    'docs',
-                    'media',
                 ].includes(arquivo)
             ) {
                 lista.push({ type: 'dir', path: caminhoCompleto });
@@ -89,6 +87,46 @@ function limparBackup() {
     removerArquivo(backupDir);
 }
 
+// Nova função para verificar referências cruzadas
+function verificarReferenciasCruzadas() {
+    const arquivos = listarArquivos(raiz);
+    const referencias = new Map();
+
+    // Primeiro, coleta todas as referências
+    for (const item of arquivos) {
+        if (item.type !== 'file' || !item.path.endsWith('.md')) continue;
+
+        const conteudo = fs.readFileSync(item.path, 'utf8');
+        const links = conteudo.match(/\[([^\]]+)\]\(([^)]+)\)/g) || [];
+
+        for (const link of links) {
+            const match = link.match(/\[([^\]]+)\]\(([^)]+)\)/);
+            if (match) {
+                const [, texto, caminho] = match;
+                if (!referencias.has(caminho)) {
+                    referencias.set(caminho, []);
+                }
+                referencias.get(caminho).push({
+                    arquivo: item.path,
+                    texto,
+                });
+            }
+        }
+    }
+
+    // Depois, verifica se os arquivos referenciados existem
+    for (const [caminho, refs] of referencias) {
+        const caminhoCompleto = path.join(raiz, caminho);
+        if (!fs.existsSync(caminhoCompleto)) {
+            relatorio.push(`\nAtenção: Arquivo referenciado não encontrado: ${caminho}`);
+            relatorio.push('  Referenciado em:');
+            for (const ref of refs) {
+                relatorio.push(`  - ${ref.arquivo} (${ref.texto})`);
+            }
+        }
+    }
+}
+
 // Nova função para verificar arquivos duplicados
 function verificarDuplicados() {
     const arquivos = listarArquivos(raiz);
@@ -98,7 +136,7 @@ function verificarDuplicados() {
         config: [],
         build: [],
         source: [],
-        outros: []
+        outros: [],
     };
 
     // Primeiro, agrupa arquivos por nome
@@ -115,7 +153,7 @@ function verificarDuplicados() {
     for (const [nome, caminhos] of arquivosPorNome) {
         if (caminhos.length > 1) {
             const extensao = path.extname(nome).toLowerCase();
-            
+
             // Classifica o tipo de arquivo
             let tipo = 'outros';
             if (['.md', '.txt', '.rst'].includes(extensao)) {
@@ -132,12 +170,12 @@ function verificarDuplicados() {
             duplicados[tipo].push({
                 nome,
                 caminhos,
-                extensao
+                extensao,
             });
 
             // Para documentação, mantém o da raiz ou o mais completo
             if (tipo === 'docs') {
-                const arquivoRaiz = caminhos.find(p => path.dirname(p) === raiz);
+                const arquivoRaiz = caminhos.find((p) => path.dirname(p) === raiz);
                 if (arquivoRaiz) {
                     // Mantém o da raiz, remove os outros
                     for (const caminho of caminhos) {
@@ -151,7 +189,7 @@ function verificarDuplicados() {
                     // Se não tem na raiz, mantém o mais completo
                     let maiorArquivo = caminhos[0];
                     let maiorTamanho = fs.statSync(maiorArquivo).size;
-                    
+
                     for (const caminho of caminhos.slice(1)) {
                         const tamanho = fs.statSync(caminho).size;
                         if (tamanho > maiorTamanho) {
@@ -173,7 +211,7 @@ function verificarDuplicados() {
 
     // Gera relatório detalhado
     relatorio.push('\n=== Relatório de Arquivos Duplicados ===');
-    
+
     for (const [tipo, lista] of Object.entries(duplicados)) {
         if (lista.length > 0) {
             relatorio.push(`\n${tipo.toUpperCase()} (${lista.length} arquivos):`);
@@ -369,15 +407,22 @@ function main() {
         backupProjeto();
         organizarEstrutura();
         atualizarIgnores();
-        
+
+        // Verificar referências cruzadas
+        relatorio.push('\nVerificando referências cruzadas...');
+        verificarReferenciasCruzadas();
+
         // Verificar duplicados
         relatorio.push('\nVerificando arquivos duplicados...');
         const duplicados = verificarDuplicados();
-        
+
         // Resumo de duplicados
-        const totalDuplicados = Object.values(duplicados).reduce((acc, curr) => acc + curr.length, 0);
+        const totalDuplicados = Object.values(duplicados).reduce(
+            (acc, curr) => acc + curr.length,
+            0
+        );
         relatorio.push(`\nTotal de arquivos duplicados encontrados: ${totalDuplicados}`);
-        
+
         if (totalDuplicados > 0) {
             relatorio.push('\nResumo por tipo:');
             for (const [tipo, lista] of Object.entries(duplicados)) {
@@ -395,10 +440,10 @@ function main() {
         } else {
             // Atualizar documentação
             atualizarDocumentacao();
-            
+
             // Atualizar GitHub
             atualizarGitHub();
-            
+
             limparBackup();
             relatorio.push('Organização concluída com sucesso.');
         }
@@ -413,4 +458,3 @@ function main() {
 }
 
 main();
-

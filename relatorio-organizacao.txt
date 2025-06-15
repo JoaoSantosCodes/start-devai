@@ -5,97 +5,9 @@ Movido: C:\Cursor\devai-extension\__backup_organizer\src\core\setup_manager.ts -
 Movido: C:\Cursor\devai-extension\__backup_organizer\src\ui\aiPanel.ts -> C:\Cursor\devai-extension\src\ui\aiPanel.ts
 
 Verificando arquivos duplicados...
-Atenção: Arquivo duplicado encontrado: .editorconfig
-  Localizações: C:\Cursor\devai-extension\.editorconfig, C:\Cursor\devai-extension\__backup_organizer\.editorconfig
-Atenção: Arquivo duplicado encontrado: .eslintrc.json
-  Localizações: C:\Cursor\devai-extension\.eslintrc.json, C:\Cursor\devai-extension\__backup_organizer\.eslintrc.json
-Atenção: Arquivo duplicado encontrado: .prettierrc
-  Localizações: C:\Cursor\devai-extension\.prettierrc, C:\Cursor\devai-extension\__backup_organizer\.prettierrc
-Atenção: Arquivo duplicado encontrado: .vscodeignore
-  Localizações: C:\Cursor\devai-extension\.vscodeignore, C:\Cursor\devai-extension\__backup_organizer\.vscodeignore
-Atenção: Arquivo duplicado encontrado: atualizar-github.js
-  Localizações: C:\Cursor\devai-extension\atualizar-github.js, C:\Cursor\devai-extension\__backup_organizer\atualizar-github.js
 Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\CHANGELOG.md
 Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\CODE_OF_CONDUCT.md
 Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\CONTRIBUTING.md
-Atenção: Arquivo duplicado encontrado: devai-assistant-1.0.0.vsix
-  Localizações: C:\Cursor\devai-extension\devai-assistant-1.0.0.vsix, C:\Cursor\devai-extension\__backup_organizer\devai-assistant-1.0.0.vsix
-Atenção: Arquivo duplicado encontrado: validateExtensions.d.ts
-  Localizações: C:\Cursor\devai-extension\dist\commands\validateExtensions.d.ts, C:\Cursor\devai-extension\__backup_organizer\dist\commands\validateExtensions.d.ts
-Atenção: Arquivo duplicado encontrado: validateExtensions.js
-  Localizações: C:\Cursor\devai-extension\dist\commands\validateExtensions.js, C:\Cursor\devai-extension\__backup_organizer\dist\commands\validateExtensions.js
-Atenção: Arquivo duplicado encontrado: validateExtensions.js.map
-  Localizações: C:\Cursor\devai-extension\dist\commands\validateExtensions.js.map, C:\Cursor\devai-extension\__backup_organizer\dist\commands\validateExtensions.js.map
-Atenção: Arquivo duplicado encontrado: aiManager.d.ts
-  Localizações: C:\Cursor\devai-extension\dist\core\aiManager.d.ts, C:\Cursor\devai-extension\__backup_organizer\dist\core\aiManager.d.ts
-Atenção: Arquivo duplicado encontrado: aiManager.js
-  Localizações: C:\Cursor\devai-extension\dist\core\aiManager.js, C:\Cursor\devai-extension\__backup_organizer\dist\core\aiManager.js
-Atenção: Arquivo duplicado encontrado: aiManager.js.map
-  Localizações: C:\Cursor\devai-extension\dist\core\aiManager.js.map, C:\Cursor\devai-extension\__backup_organizer\dist\core\aiManager.js.map
-Atenção: Arquivo duplicado encontrado: extensionOrganizer.d.ts
-  Localizações: C:\Cursor\devai-extension\dist\core\extensionOrganizer.d.ts, C:\Cursor\devai-extension\__backup_organizer\dist\core\extensionOrganizer.d.ts
-Atenção: Arquivo duplicado encontrado: extensionOrganizer.js
-  Localizações: C:\Cursor\devai-extension\dist\core\extensionOrganizer.js, C:\Cursor\devai-extension\__backup_organizer\dist\core\extensionOrganizer.js
-Atenção: Arquivo duplicado encontrado: extensionOrganizer.js.map
-  Localizações: C:\Cursor\devai-extension\dist\core\extensionOrganizer.js.map, C:\Cursor\devai-extension\__backup_organizer\dist\core\extensionOrganizer.js.map
-Atenção: Arquivo duplicado encontrado: extensionPerformance.d.ts
-  Localizações: C:\Cursor\devai-extension\dist\core\extensionPerformance.d.ts, C:\Cursor\devai-extension\__backup_organizer\dist\core\extensionPerformance.d.ts
-Atenção: Arquivo duplicado encontrado: extensionPerformance.js
-  Localizações: C:\Cursor\devai-extension\dist\core\extensionPerformance.js, C:\Cursor\devai-extension\__backup_organizer\dist\core\extensionPerformance.js
-Atenção: Arquivo duplicado encontrado: extensionPerformance.js.map
-  Localizações: C:\Cursor\devai-extension\dist\core\extensionPerformance.js.map, C:\Cursor\devai-extension\__backup_organizer\dist\core\extensionPerformance.js.map
-Atenção: Arquivo duplicado encontrado: extensionProfiles.d.ts
-  Localizações: C:\Cursor\devai-extension\dist\core\extensionProfiles.d.ts, C:\Cursor\devai-extension\__backup_organizer\dist\core\extensionProfiles.d.ts
-Atenção: Arquivo duplicado encontrado: extensionProfiles.js
-  Localizações: C:\Cursor\devai-extension\dist\core\extensionProfiles.js, C:\Cursor\devai-extension\__backup_organizer\dist\core\extensionProfiles.js
-Atenção: Arquivo duplicado encontrado: extensionProfiles.js.map
-  Localizações: C:\Cursor\devai-extension\dist\core\extensionProfiles.js.map, C:\Cursor\devai-extension\__backup_organizer\dist\core\extensionProfiles.js.map
-Atenção: Arquivo duplicado encontrado: logger.d.ts
-  Localizações: C:\Cursor\devai-extension\dist\core\logger.d.ts, C:\Cursor\devai-extension\__backup_organizer\dist\core\logger.d.ts
-Atenção: Arquivo duplicado encontrado: logger.js
-  Localizações: C:\Cursor\devai-extension\dist\core\logger.js, C:\Cursor\devai-extension\__backup_organizer\dist\core\logger.js
-Atenção: Arquivo duplicado encontrado: logger.js.map
-  Localizações: C:\Cursor\devai-extension\dist\core\logger.js.map, C:\Cursor\devai-extension\__backup_organizer\dist\core\logger.js.map
-Atenção: Arquivo duplicado encontrado: performanceAnalyzer.d.ts
-  Localizações: C:\Cursor\devai-extension\dist\core\performanceAnalyzer.d.ts, C:\Cursor\devai-extension\__backup_organizer\dist\core\performanceAnalyzer.d.ts
-Atenção: Arquivo duplicado encontrado: performanceAnalyzer.js
-  Localizações: C:\Cursor\devai-extension\dist\core\performanceAnalyzer.js, C:\Cursor\devai-extension\__backup_organizer\dist\core\performanceAnalyzer.js
-Atenção: Arquivo duplicado encontrado: performanceAnalyzer.js.map
-  Localizações: C:\Cursor\devai-extension\dist\core\performanceAnalyzer.js.map, C:\Cursor\devai-extension\__backup_organizer\dist\core\performanceAnalyzer.js.map
-Atenção: Arquivo duplicado encontrado: setup_manager.d.ts
-  Localizações: C:\Cursor\devai-extension\dist\core\setup_manager.d.ts, C:\Cursor\devai-extension\__backup_organizer\dist\core\setup_manager.d.ts
-Atenção: Arquivo duplicado encontrado: setup_manager.js
-  Localizações: C:\Cursor\devai-extension\dist\core\setup_manager.js, C:\Cursor\devai-extension\__backup_organizer\dist\core\setup_manager.js
-Atenção: Arquivo duplicado encontrado: setup_manager.js.map
-  Localizações: C:\Cursor\devai-extension\dist\core\setup_manager.js.map, C:\Cursor\devai-extension\__backup_organizer\dist\core\setup_manager.js.map
-Atenção: Arquivo duplicado encontrado: smartProfiles.d.ts
-  Localizações: C:\Cursor\devai-extension\dist\core\smartProfiles.d.ts, C:\Cursor\devai-extension\__backup_organizer\dist\core\smartProfiles.d.ts
-Atenção: Arquivo duplicado encontrado: smartProfiles.js
-  Localizações: C:\Cursor\devai-extension\dist\core\smartProfiles.js, C:\Cursor\devai-extension\__backup_organizer\dist\core\smartProfiles.js
-Atenção: Arquivo duplicado encontrado: smartProfiles.js.map
-  Localizações: C:\Cursor\devai-extension\dist\core\smartProfiles.js.map, C:\Cursor\devai-extension\__backup_organizer\dist\core\smartProfiles.js.map
-Atenção: Arquivo duplicado encontrado: extension.d.ts
-  Localizações: C:\Cursor\devai-extension\dist\extension.d.ts, C:\Cursor\devai-extension\src\extension.d.ts, C:\Cursor\devai-extension\__backup_organizer\dist\extension.d.ts, C:\Cursor\devai-extension\__backup_organizer\src\extension.d.ts
-Atenção: Arquivo duplicado encontrado: extension.js
-  Localizações: C:\Cursor\devai-extension\dist\extension.js, C:\Cursor\devai-extension\src\extension.js, C:\Cursor\devai-extension\__backup_organizer\dist\extension.js, C:\Cursor\devai-extension\__backup_organizer\src\extension.js
-Atenção: Arquivo duplicado encontrado: extension.js.map
-  Localizações: C:\Cursor\devai-extension\dist\extension.js.map, C:\Cursor\devai-extension\src\extension.js.map, C:\Cursor\devai-extension\__backup_organizer\dist\extension.js.map, C:\Cursor\devai-extension\__backup_organizer\src\extension.js.map
-Atenção: Arquivo duplicado encontrado: aiPanel.d.ts
-  Localizações: C:\Cursor\devai-extension\dist\ui\aiPanel.d.ts, C:\Cursor\devai-extension\__backup_organizer\dist\ui\aiPanel.d.ts
-Atenção: Arquivo duplicado encontrado: aiPanel.js
-  Localizações: C:\Cursor\devai-extension\dist\ui\aiPanel.js, C:\Cursor\devai-extension\__backup_organizer\dist\ui\aiPanel.js
-Atenção: Arquivo duplicado encontrado: aiPanel.js.map
-  Localizações: C:\Cursor\devai-extension\dist\ui\aiPanel.js.map, C:\Cursor\devai-extension\__backup_organizer\dist\ui\aiPanel.js.map
-Atenção: Arquivo duplicado encontrado: LICENSE
-  Localizações: C:\Cursor\devai-extension\LICENSE, C:\Cursor\devai-extension\__backup_organizer\LICENSE
-Atenção: Arquivo duplicado encontrado: listar-arquivos.js
-  Localizações: C:\Cursor\devai-extension\listar-arquivos.js, C:\Cursor\devai-extension\scripts\listar-arquivos.js, C:\Cursor\devai-extension\__backup_organizer\listar-arquivos.js, C:\Cursor\devai-extension\__backup_organizer\scripts\listar-arquivos.js
-Atenção: Arquivo duplicado encontrado: organizar-projeto.js
-  Localizações: C:\Cursor\devai-extension\organizar-projeto.js, C:\Cursor\devai-extension\__backup_organizer\organizar-projeto.js
-Atenção: Arquivo duplicado encontrado: package-lock.json
-  Localizações: C:\Cursor\devai-extension\package-lock.json, C:\Cursor\devai-extension\__backup_organizer\package-lock.json
-Atenção: Arquivo duplicado encontrado: package.json
-  Localizações: C:\Cursor\devai-extension\package.json, C:\Cursor\devai-extension\__backup_organizer\package.json
 Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\README.md
 Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\relatorio-extensoes.txt
 Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\relatorio-github.txt
@@ -103,48 +15,338 @@ Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\relator
 Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\relatorio-testes-extensoes.txt
 Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\relatorio-testes.txt
 Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\ROADMAP.md
-Atenção: Arquivo duplicado encontrado: build.py
-  Localizações: C:\Cursor\devai-extension\scripts\build\build.py, C:\Cursor\devai-extension\__backup_organizer\scripts\build\build.py
-Atenção: Arquivo duplicado encontrado: create_icon.py
-  Localizações: C:\Cursor\devai-extension\scripts\build\create_icon.py, C:\Cursor\devai-extension\scripts\create_icon.py, C:\Cursor\devai-extension\__backup_organizer\scripts\build\create_icon.py, C:\Cursor\devai-extension\__backup_organizer\scripts\create_icon.py
-Atenção: Arquivo duplicado encontrado: check-environment.bat
-  Localizações: C:\Cursor\devai-extension\scripts\setup\check-environment.bat, C:\Cursor\devai-extension\__backup_organizer\scripts\setup\check-environment.bat
-Atenção: Arquivo duplicado encontrado: fix_npm_path.ps1
-  Localizações: C:\Cursor\devai-extension\scripts\setup\fix_npm_path.ps1, C:\Cursor\devai-extension\__backup_organizer\scripts\setup\fix_npm_path.ps1
 Removido arquivo duplicado: C:\Cursor\devai-extension\__backup_organizer\SECURITY.md
-Atenção: Arquivo duplicado encontrado: validateExtensions.ts
-  Localizações: C:\Cursor\devai-extension\src\commands\validateExtensions.ts, C:\Cursor\devai-extension\__backup_organizer\src\commands\validateExtensions.ts
-Atenção: Arquivo duplicado encontrado: aiManager.ts
-  Localizações: C:\Cursor\devai-extension\src\core\aiManager.ts, C:\Cursor\devai-extension\__backup_organizer\__backup_organizer\src\core\aiManager.ts
-Atenção: Arquivo duplicado encontrado: extensionOrganizer.ts
-  Localizações: C:\Cursor\devai-extension\src\core\extensionOrganizer.ts, C:\Cursor\devai-extension\__backup_organizer\src\core\extensionOrganizer.ts
-Atenção: Arquivo duplicado encontrado: extensionPerformance.ts
-  Localizações: C:\Cursor\devai-extension\src\core\extensionPerformance.ts, C:\Cursor\devai-extension\__backup_organizer\src\core\extensionPerformance.ts
-Atenção: Arquivo duplicado encontrado: extensionProfiles.ts
-  Localizações: C:\Cursor\devai-extension\src\core\extensionProfiles.ts, C:\Cursor\devai-extension\__backup_organizer\src\core\extensionProfiles.ts
-Atenção: Arquivo duplicado encontrado: logger.ts
-  Localizações: C:\Cursor\devai-extension\src\core\logger.ts, C:\Cursor\devai-extension\__backup_organizer\__backup_organizer\src\core\logger.ts
-Atenção: Arquivo duplicado encontrado: performanceAnalyzer.ts
-  Localizações: C:\Cursor\devai-extension\src\core\performanceAnalyzer.ts, C:\Cursor\devai-extension\__backup_organizer\src\core\performanceAnalyzer.ts
-Atenção: Arquivo duplicado encontrado: setup_manager.py
-  Localizações: C:\Cursor\devai-extension\src\core\setup_manager.py, C:\Cursor\devai-extension\__backup_organizer\src\core\setup_manager.py
-Atenção: Arquivo duplicado encontrado: setup_manager.ts
-  Localizações: C:\Cursor\devai-extension\src\core\setup_manager.ts, C:\Cursor\devai-extension\__backup_organizer\__backup_organizer\src\core\setup_manager.ts
-Atenção: Arquivo duplicado encontrado: smartProfiles.ts
-  Localizações: C:\Cursor\devai-extension\src\core\smartProfiles.ts, C:\Cursor\devai-extension\__backup_organizer\src\core\smartProfiles.ts
-Atenção: Arquivo duplicado encontrado: extension.ts
-  Localizações: C:\Cursor\devai-extension\src\extension.ts, C:\Cursor\devai-extension\__backup_organizer\src\extension.ts
-Atenção: Arquivo duplicado encontrado: aiPanel.ts
-  Localizações: C:\Cursor\devai-extension\src\ui\aiPanel.ts, C:\Cursor\devai-extension\__backup_organizer\__backup_organizer\src\ui\aiPanel.ts
-Atenção: Arquivo duplicado encontrado: test-extension.js
-  Localizações: C:\Cursor\devai-extension\test-extension.js, C:\Cursor\devai-extension\__backup_organizer\test-extension.js
-Atenção: Arquivo duplicado encontrado: test-extensions.js
-  Localizações: C:\Cursor\devai-extension\test-extensions.js, C:\Cursor\devai-extension\__backup_organizer\test-extensions.js
-Atenção: Arquivo duplicado encontrado: tsconfig.json
-  Localizações: C:\Cursor\devai-extension\tsconfig.json, C:\Cursor\devai-extension\__backup_organizer\tsconfig.json
-Atenção: Arquivo duplicado encontrado: validar-extensoes.js
-  Localizações: C:\Cursor\devai-extension\validar-extensoes.js, C:\Cursor\devai-extension\__backup_organizer\validar-extensoes.js
-Encontrados 11 arquivos duplicados.
+
+=== Relatório de Arquivos Duplicados ===
+
+DOCS (11 arquivos):
+
+  CHANGELOG.md:
+    - C:\Cursor\devai-extension\CHANGELOG.md
+    - C:\Cursor\devai-extension\__backup_organizer\CHANGELOG.md
+
+  CODE_OF_CONDUCT.md:
+    - C:\Cursor\devai-extension\CODE_OF_CONDUCT.md
+    - C:\Cursor\devai-extension\__backup_organizer\CODE_OF_CONDUCT.md
+
+  CONTRIBUTING.md:
+    - C:\Cursor\devai-extension\CONTRIBUTING.md
+    - C:\Cursor\devai-extension\__backup_organizer\CONTRIBUTING.md
+
+  README.md:
+    - C:\Cursor\devai-extension\README.md
+    - C:\Cursor\devai-extension\__backup_organizer\README.md
+
+  relatorio-extensoes.txt:
+    - C:\Cursor\devai-extension\relatorio-extensoes.txt
+    - C:\Cursor\devai-extension\__backup_organizer\relatorio-extensoes.txt
+
+  relatorio-github.txt:
+    - C:\Cursor\devai-extension\relatorio-github.txt
+    - C:\Cursor\devai-extension\__backup_organizer\relatorio-github.txt
+
+  relatorio-organizacao.txt:
+    - C:\Cursor\devai-extension\relatorio-organizacao.txt
+    - C:\Cursor\devai-extension\__backup_organizer\relatorio-organizacao.txt
+
+  relatorio-testes-extensoes.txt:
+    - C:\Cursor\devai-extension\relatorio-testes-extensoes.txt
+    - C:\Cursor\devai-extension\__backup_organizer\relatorio-testes-extensoes.txt
+
+  relatorio-testes.txt:
+    - C:\Cursor\devai-extension\relatorio-testes.txt
+    - C:\Cursor\devai-extension\__backup_organizer\relatorio-testes.txt
+
+  ROADMAP.md:
+    - C:\Cursor\devai-extension\ROADMAP.md
+    - C:\Cursor\devai-extension\__backup_organizer\ROADMAP.md
+
+  SECURITY.md:
+    - C:\Cursor\devai-extension\SECURITY.md
+    - C:\Cursor\devai-extension\__backup_organizer\SECURITY.md
+
+CONFIG (4 arquivos):
+
+  .eslintrc.json:
+    - C:\Cursor\devai-extension\.eslintrc.json
+    - C:\Cursor\devai-extension\__backup_organizer\.eslintrc.json
+
+  package-lock.json:
+    - C:\Cursor\devai-extension\package-lock.json
+    - C:\Cursor\devai-extension\__backup_organizer\package-lock.json
+
+  package.json:
+    - C:\Cursor\devai-extension\package.json
+    - C:\Cursor\devai-extension\__backup_organizer\package.json
+
+  tsconfig.json:
+    - C:\Cursor\devai-extension\tsconfig.json
+    - C:\Cursor\devai-extension\__backup_organizer\tsconfig.json
+
+BUILD (22 arquivos):
+
+  atualizar-github.js:
+    - C:\Cursor\devai-extension\atualizar-github.js
+    - C:\Cursor\devai-extension\__backup_organizer\atualizar-github.js
+
+  validateExtensions.js:
+    - C:\Cursor\devai-extension\dist\commands\validateExtensions.js
+    - C:\Cursor\devai-extension\__backup_organizer\dist\commands\validateExtensions.js
+
+  aiManager.js:
+    - C:\Cursor\devai-extension\dist\core\aiManager.js
+    - C:\Cursor\devai-extension\__backup_organizer\dist\core\aiManager.js
+
+  extensionOrganizer.js:
+    - C:\Cursor\devai-extension\dist\core\extensionOrganizer.js
+    - C:\Cursor\devai-extension\__backup_organizer\dist\core\extensionOrganizer.js
+
+  extensionPerformance.js:
+    - C:\Cursor\devai-extension\dist\core\extensionPerformance.js
+    - C:\Cursor\devai-extension\__backup_organizer\dist\core\extensionPerformance.js
+
+  extensionProfiles.js:
+    - C:\Cursor\devai-extension\dist\core\extensionProfiles.js
+    - C:\Cursor\devai-extension\__backup_organizer\dist\core\extensionProfiles.js
+
+  logger.js:
+    - C:\Cursor\devai-extension\dist\core\logger.js
+    - C:\Cursor\devai-extension\__backup_organizer\dist\core\logger.js
+
+  performanceAnalyzer.js:
+    - C:\Cursor\devai-extension\dist\core\performanceAnalyzer.js
+    - C:\Cursor\devai-extension\__backup_organizer\dist\core\performanceAnalyzer.js
+
+  setup_manager.js:
+    - C:\Cursor\devai-extension\dist\core\setup_manager.js
+    - C:\Cursor\devai-extension\__backup_organizer\dist\core\setup_manager.js
+
+  smartProfiles.js:
+    - C:\Cursor\devai-extension\dist\core\smartProfiles.js
+    - C:\Cursor\devai-extension\__backup_organizer\dist\core\smartProfiles.js
+
+  extension.js:
+    - C:\Cursor\devai-extension\dist\extension.js
+    - C:\Cursor\devai-extension\src\extension.js
+    - C:\Cursor\devai-extension\__backup_organizer\dist\extension.js
+    - C:\Cursor\devai-extension\__backup_organizer\src\extension.js
+
+  aiPanel.js:
+    - C:\Cursor\devai-extension\dist\ui\aiPanel.js
+    - C:\Cursor\devai-extension\__backup_organizer\dist\ui\aiPanel.js
+
+  listar-arquivos.js:
+    - C:\Cursor\devai-extension\listar-arquivos.js
+    - C:\Cursor\devai-extension\scripts\listar-arquivos.js
+    - C:\Cursor\devai-extension\__backup_organizer\listar-arquivos.js
+    - C:\Cursor\devai-extension\__backup_organizer\scripts\listar-arquivos.js
+
+  organizar-projeto.js:
+    - C:\Cursor\devai-extension\organizar-projeto.js
+    - C:\Cursor\devai-extension\__backup_organizer\organizar-projeto.js
+
+  build.py:
+    - C:\Cursor\devai-extension\scripts\build\build.py
+    - C:\Cursor\devai-extension\__backup_organizer\scripts\build\build.py
+
+  create_icon.py:
+    - C:\Cursor\devai-extension\scripts\build\create_icon.py
+    - C:\Cursor\devai-extension\scripts\create_icon.py
+    - C:\Cursor\devai-extension\__backup_organizer\scripts\build\create_icon.py
+    - C:\Cursor\devai-extension\__backup_organizer\scripts\create_icon.py
+
+  check-environment.bat:
+    - C:\Cursor\devai-extension\scripts\setup\check-environment.bat
+    - C:\Cursor\devai-extension\__backup_organizer\scripts\setup\check-environment.bat
+
+  fix_npm_path.ps1:
+    - C:\Cursor\devai-extension\scripts\setup\fix_npm_path.ps1
+    - C:\Cursor\devai-extension\__backup_organizer\scripts\setup\fix_npm_path.ps1
+
+  setup_manager.py:
+    - C:\Cursor\devai-extension\src\core\setup_manager.py
+    - C:\Cursor\devai-extension\__backup_organizer\src\core\setup_manager.py
+
+  test-extension.js:
+    - C:\Cursor\devai-extension\test-extension.js
+    - C:\Cursor\devai-extension\__backup_organizer\test-extension.js
+
+  test-extensions.js:
+    - C:\Cursor\devai-extension\test-extensions.js
+    - C:\Cursor\devai-extension\__backup_organizer\test-extensions.js
+
+  validar-extensoes.js:
+    - C:\Cursor\devai-extension\validar-extensoes.js
+    - C:\Cursor\devai-extension\__backup_organizer\validar-extensoes.js
+
+SOURCE (22 arquivos):
+
+  validateExtensions.d.ts:
+    - C:\Cursor\devai-extension\dist\commands\validateExtensions.d.ts
+    - C:\Cursor\devai-extension\__backup_organizer\dist\commands\validateExtensions.d.ts
+
+  aiManager.d.ts:
+    - C:\Cursor\devai-extension\dist\core\aiManager.d.ts
+    - C:\Cursor\devai-extension\__backup_organizer\dist\core\aiManager.d.ts
+
+  extensionOrganizer.d.ts:
+    - C:\Cursor\devai-extension\dist\core\extensionOrganizer.d.ts
+    - C:\Cursor\devai-extension\__backup_organizer\dist\core\extensionOrganizer.d.ts
+
+  extensionPerformance.d.ts:
+    - C:\Cursor\devai-extension\dist\core\extensionPerformance.d.ts
+    - C:\Cursor\devai-extension\__backup_organizer\dist\core\extensionPerformance.d.ts
+
+  extensionProfiles.d.ts:
+    - C:\Cursor\devai-extension\dist\core\extensionProfiles.d.ts
+    - C:\Cursor\devai-extension\__backup_organizer\dist\core\extensionProfiles.d.ts
+
+  logger.d.ts:
+    - C:\Cursor\devai-extension\dist\core\logger.d.ts
+    - C:\Cursor\devai-extension\__backup_organizer\dist\core\logger.d.ts
+
+  performanceAnalyzer.d.ts:
+    - C:\Cursor\devai-extension\dist\core\performanceAnalyzer.d.ts
+    - C:\Cursor\devai-extension\__backup_organizer\dist\core\performanceAnalyzer.d.ts
+
+  setup_manager.d.ts:
+    - C:\Cursor\devai-extension\dist\core\setup_manager.d.ts
+    - C:\Cursor\devai-extension\__backup_organizer\dist\core\setup_manager.d.ts
+
+  smartProfiles.d.ts:
+    - C:\Cursor\devai-extension\dist\core\smartProfiles.d.ts
+    - C:\Cursor\devai-extension\__backup_organizer\dist\core\smartProfiles.d.ts
+
+  extension.d.ts:
+    - C:\Cursor\devai-extension\dist\extension.d.ts
+    - C:\Cursor\devai-extension\src\extension.d.ts
+    - C:\Cursor\devai-extension\__backup_organizer\dist\extension.d.ts
+    - C:\Cursor\devai-extension\__backup_organizer\src\extension.d.ts
+
+  aiPanel.d.ts:
+    - C:\Cursor\devai-extension\dist\ui\aiPanel.d.ts
+    - C:\Cursor\devai-extension\__backup_organizer\dist\ui\aiPanel.d.ts
+
+  validateExtensions.ts:
+    - C:\Cursor\devai-extension\src\commands\validateExtensions.ts
+    - C:\Cursor\devai-extension\__backup_organizer\src\commands\validateExtensions.ts
+
+  aiManager.ts:
+    - C:\Cursor\devai-extension\src\core\aiManager.ts
+    - C:\Cursor\devai-extension\__backup_organizer\__backup_organizer\src\core\aiManager.ts
+
+  extensionOrganizer.ts:
+    - C:\Cursor\devai-extension\src\core\extensionOrganizer.ts
+    - C:\Cursor\devai-extension\__backup_organizer\src\core\extensionOrganizer.ts
+
+  extensionPerformance.ts:
+    - C:\Cursor\devai-extension\src\core\extensionPerformance.ts
+    - C:\Cursor\devai-extension\__backup_organizer\src\core\extensionPerformance.ts
+
+  extensionProfiles.ts:
+    - C:\Cursor\devai-extension\src\core\extensionProfiles.ts
+    - C:\Cursor\devai-extension\__backup_organizer\src\core\extensionProfiles.ts
+
+  logger.ts:
+    - C:\Cursor\devai-extension\src\core\logger.ts
+    - C:\Cursor\devai-extension\__backup_organizer\__backup_organizer\src\core\logger.ts
+
+  performanceAnalyzer.ts:
+    - C:\Cursor\devai-extension\src\core\performanceAnalyzer.ts
+    - C:\Cursor\devai-extension\__backup_organizer\src\core\performanceAnalyzer.ts
+
+  setup_manager.ts:
+    - C:\Cursor\devai-extension\src\core\setup_manager.ts
+    - C:\Cursor\devai-extension\__backup_organizer\__backup_organizer\src\core\setup_manager.ts
+
+  smartProfiles.ts:
+    - C:\Cursor\devai-extension\src\core\smartProfiles.ts
+    - C:\Cursor\devai-extension\__backup_organizer\src\core\smartProfiles.ts
+
+  extension.ts:
+    - C:\Cursor\devai-extension\src\extension.ts
+    - C:\Cursor\devai-extension\__backup_organizer\src\extension.ts
+
+  aiPanel.ts:
+    - C:\Cursor\devai-extension\src\ui\aiPanel.ts
+    - C:\Cursor\devai-extension\__backup_organizer\__backup_organizer\src\ui\aiPanel.ts
+
+OUTROS (16 arquivos):
+
+  .editorconfig:
+    - C:\Cursor\devai-extension\.editorconfig
+    - C:\Cursor\devai-extension\__backup_organizer\.editorconfig
+
+  .prettierrc:
+    - C:\Cursor\devai-extension\.prettierrc
+    - C:\Cursor\devai-extension\__backup_organizer\.prettierrc
+
+  .vscodeignore:
+    - C:\Cursor\devai-extension\.vscodeignore
+    - C:\Cursor\devai-extension\__backup_organizer\.vscodeignore
+
+  devai-assistant-1.0.0.vsix:
+    - C:\Cursor\devai-extension\devai-assistant-1.0.0.vsix
+    - C:\Cursor\devai-extension\__backup_organizer\devai-assistant-1.0.0.vsix
+
+  validateExtensions.js.map:
+    - C:\Cursor\devai-extension\dist\commands\validateExtensions.js.map
+    - C:\Cursor\devai-extension\__backup_organizer\dist\commands\validateExtensions.js.map
+
+  aiManager.js.map:
+    - C:\Cursor\devai-extension\dist\core\aiManager.js.map
+    - C:\Cursor\devai-extension\__backup_organizer\dist\core\aiManager.js.map
+
+  extensionOrganizer.js.map:
+    - C:\Cursor\devai-extension\dist\core\extensionOrganizer.js.map
+    - C:\Cursor\devai-extension\__backup_organizer\dist\core\extensionOrganizer.js.map
+
+  extensionPerformance.js.map:
+    - C:\Cursor\devai-extension\dist\core\extensionPerformance.js.map
+    - C:\Cursor\devai-extension\__backup_organizer\dist\core\extensionPerformance.js.map
+
+  extensionProfiles.js.map:
+    - C:\Cursor\devai-extension\dist\core\extensionProfiles.js.map
+    - C:\Cursor\devai-extension\__backup_organizer\dist\core\extensionProfiles.js.map
+
+  logger.js.map:
+    - C:\Cursor\devai-extension\dist\core\logger.js.map
+    - C:\Cursor\devai-extension\__backup_organizer\dist\core\logger.js.map
+
+  performanceAnalyzer.js.map:
+    - C:\Cursor\devai-extension\dist\core\performanceAnalyzer.js.map
+    - C:\Cursor\devai-extension\__backup_organizer\dist\core\performanceAnalyzer.js.map
+
+  setup_manager.js.map:
+    - C:\Cursor\devai-extension\dist\core\setup_manager.js.map
+    - C:\Cursor\devai-extension\__backup_organizer\dist\core\setup_manager.js.map
+
+  smartProfiles.js.map:
+    - C:\Cursor\devai-extension\dist\core\smartProfiles.js.map
+    - C:\Cursor\devai-extension\__backup_organizer\dist\core\smartProfiles.js.map
+
+  extension.js.map:
+    - C:\Cursor\devai-extension\dist\extension.js.map
+    - C:\Cursor\devai-extension\src\extension.js.map
+    - C:\Cursor\devai-extension\__backup_organizer\dist\extension.js.map
+    - C:\Cursor\devai-extension\__backup_organizer\src\extension.js.map
+
+  aiPanel.js.map:
+    - C:\Cursor\devai-extension\dist\ui\aiPanel.js.map
+    - C:\Cursor\devai-extension\__backup_organizer\dist\ui\aiPanel.js.map
+
+  LICENSE:
+    - C:\Cursor\devai-extension\LICENSE
+    - C:\Cursor\devai-extension\__backup_organizer\LICENSE
+
+Total de arquivos duplicados encontrados: 75
+
+Resumo por tipo:
+- docs: 11 arquivos
+- config: 4 arquivos
+- build: 22 arquivos
+- source: 22 arquivos
+- outros: 16 arquivos
 Validação: Projeto compilou com sucesso.
 
 Atualizando documentação...
