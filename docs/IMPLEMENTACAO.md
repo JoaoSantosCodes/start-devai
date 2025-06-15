@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-Este documento descreve a implementação e utilização do sistema de organização e atualização automática do projeto DevAI Extension.
+Este documento descreve a implementação, integração e utilização do sistema DevAI Extension, incluindo organização automática, perfis inteligentes, análise de desempenho e comandos rápidos no VS Code.
 
 ## Estrutura do Sistema
 
@@ -10,8 +10,8 @@ Este documento descreve a implementação e utilização do sistema de organiza�
 
 1. **organizar-projeto.js**
 
-    - Responsável pela organização do projeto
-    - Realiza backup automático
+    - Organização automática do projeto
+    - Backup automático
     - Move arquivos para suas localizações corretas
     - Atualiza arquivos de configuração
     - Valida a compilação
@@ -24,6 +24,20 @@ Este documento descreve a implementação e utilização do sistema de organiza�
     - Cria commits
     - Realiza push para o repositório remoto
 
+### Núcleo da Extensão (src/core)
+
+-   **smartProfiles.ts**: Perfis inteligentes de extensões, detecção automática do tipo de projeto, aplicação de configurações e recomendações.
+-   **performanceAnalyzer.ts**: Análise de desempenho das extensões, uso de memória, CPU e sugestões de otimização.
+-   **extensionOrganizer.ts**: Organização, agrupamento, recomendação e ativação/desativação de extensões por categoria.
+
+### Comandos VS Code
+
+-   `DevAI: Validar Extensões`: Detecta e sugere perfis inteligentes para o projeto.
+-   `DevAI: Organizar Extensões`: Gera relatório, recomenda, ativa/desativa e instala extensões.
+-   `DevAI: Analisar Desempenho`: Mostra relatório de uso de recursos e sugestões de otimização.
+-   `DevAI: Criar/Aplicar/Excluir Perfil de Extensões`: Gerencia perfis personalizados.
+-   `DevAI: Gerenciar Grupos de Extensões`: Ativa/desativa grupos de extensões por categoria.
+
 ### Pastas e Arquivos
 
 ```
@@ -32,11 +46,16 @@ devai-extension/
 │   ├── core/
 │   │   ├── aiManager.ts
 │   │   ├── logger.ts
-│   │   └── setup_manager.ts
+│   │   ├── setup_manager.ts
+│   │   ├── smartProfiles.ts
+│   │   ├── performanceAnalyzer.ts
+│   │   └── extensionOrganizer.ts
 │   └── ui/
 │       └── aiPanel.ts
 ├── organizar-projeto.js
 ├── atualizar-github.js
+├── relatorio-organizacao.txt
+├── relatorio-github.txt
 ├── tsconfig.json
 ├── .gitignore
 └── .vscodeignore
@@ -57,13 +76,19 @@ devai-extension/
     - Chama automaticamente o script de atualização do GitHub
 
 2. **Atualização do GitHub**
+
     ```bash
     node atualizar-github.js
     ```
+
     - Verifica status do git
     - Adiciona mudanças
     - Cria commit com data
     - Realiza push para o repositório
+
+3. **Uso dos Comandos VS Code**
+    - Organize, valide, analise e otimize o ambiente diretamente pelo VS Code usando a paleta de comandos (`Ctrl+Shift+P`).
+    - Consulte os relatórios e logs para acompanhamento.
 
 ## Relatórios
 
@@ -85,83 +110,23 @@ O sistema gera dois tipos de relatórios:
 
 O sistema inclui tratamento robusto de erros:
 
-1. **Backup**
-
-    - Ignora pastas problemáticas
-    - Registra falhas sem interromper o processo
-    - Restaura backup em caso de erro
-
-2. **Compilação**
-
-    - Valida o projeto após organização
-    - Restaura backup se houver falha
-    - Registra erros no relatório
-
-3. **GitHub**
-    - Verifica status antes de operações
-    - Trata erros de permissão
-    - Registra falhas no relatório
-
-## Configuração
-
-### tsconfig.json
-
-```json
-{
-    "compilerOptions": {
-        "rootDir": "src",
-        "outDir": "out"
-    },
-    "exclude": ["node_modules", ".vscode-test", "out", "dist", "__backup_organizer"]
-}
-```
-
-### .gitignore e .vscodeignore
-
--   Ignoram arquivos temporários
--   Excluem pastas de backup
--   Mantêm apenas arquivos essenciais
+-   Backup e restauração automática
+-   Validação de compilação
+-   Logs detalhados
+-   Mensagens de erro amigáveis
 
 ## Boas Práticas
 
-1. **Backup**
-
-    - Sempre faça backup antes de executar
-    - Verifique o relatório após execução
-    - Mantenha cópias de segurança
-
-2. **GitHub**
-
-    - Verifique o status antes de commitar
-    - Revise as mudanças antes do push
-    - Mantenha mensagens de commit claras
-
-3. **Manutenção**
-    - Atualize os scripts regularmente
-    - Mantenha a documentação atualizada
-    - Teste após cada alteração
+-   Sempre faça backup antes de executar scripts
+-   Revise os relatórios após cada execução
+-   Use os comandos do VS Code para manter o ambiente otimizado
+-   Mantenha a documentação atualizada
 
 ## Troubleshooting
 
-### Problemas Comuns
-
-1. **Erro de Compilação**
-
-    - Verifique o relatório
-    - Restaure o backup
-    - Corrija os erros
-    - Execute novamente
-
-2. **Erro no GitHub**
-
-    - Verifique as credenciais
-    - Confirme o status do repositório
-    - Verifique as permissões
-
-3. **Erro de Permissão**
-    - Verifique os direitos de acesso
-    - Feche arquivos abertos
-    - Execute como administrador se necessário
+-   Consulte os relatórios para identificar problemas
+-   Use os comandos de troubleshooting do VS Code
+-   Abra uma issue no GitHub para dúvidas ou sugestões
 
 ## Suporte
 

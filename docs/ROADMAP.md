@@ -1,14 +1,18 @@
 # Roadmap do Projeto
 
-## Versão Atual (1.0.0)
+## Versão Atual (1.1.0)
 
 -   ✅ Sistema de organização automática
 -   ✅ Backup automático
 -   ✅ Atualização automática no GitHub
 -   ✅ Validação de compilação
 -   ✅ Documentação completa
+-   ✅ Organizador de Extensões (VS Code)
+-   ✅ Perfis Inteligentes de Extensões
+-   ✅ Análise de Desempenho das Extensões
+-   ✅ Comandos rápidos no VS Code para organização, análise e perfis
 
-## Próxima Versão (1.1.0)
+## Próxima Versão (1.2.0)
 
 ### Melhorias no Sistema de Organização
 
@@ -17,16 +21,18 @@
 -   [ ] Suporte a múltiplos padrões de organização
 -   [ ] Análise de dependências entre arquivos
 -   [ ] Sugestões automáticas de organização
+-   [ ] Dashboard visual de extensões e desempenho
+-   [ ] Sincronização de perfis entre máquinas
 
 ### Melhorias na Documentação
 
 -   [ ] Documentação interativa
--   [ ] Exemplos de uso
+-   [ ] Exemplos de uso detalhados
 -   [ ] Guias de troubleshooting
 -   [ ] Vídeos tutoriais
 -   [ ] Documentação em múltiplos idiomas
 
-## Versão 1.2.0
+## Versão 1.3.0
 
 ### Automação Avançada
 
@@ -35,6 +41,7 @@
 -   [ ] Análise de código
 -   [ ] Geração de relatórios
 -   [ ] Dashboard de métricas
+-   [ ] Integração com outros sistemas de controle de versão
 
 ### Segurança
 
@@ -43,24 +50,6 @@
 -   [ ] Criptografia de dados sensíveis
 -   [ ] Auditoria de código
 -   [ ] Políticas de segurança
-
-## Versão 1.3.0
-
-### Integração
-
--   [ ] Suporte a múltiplos repositórios
--   [ ] Integração com outros sistemas de controle de versão
--   [ ] Plugins para IDEs populares
--   [ ] API REST para integração
--   [ ] Webhooks para eventos
-
-### Performance
-
--   [ ] Otimização de backup
--   [ ] Compilação incremental
--   [ ] Cache inteligente
--   [ ] Paralelização de tarefas
--   [ ] Análise de performance
 
 ## Versão 2.0.0
 

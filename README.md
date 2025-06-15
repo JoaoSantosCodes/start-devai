@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-DevAI Extension é uma extensão para o VS Code que integra capacidades de IA para auxiliar no desenvolvimento. O projeto inclui um sistema automatizado de organização e atualização que mantém o código limpo e atualizado no GitHub.
+DevAI Extension é uma extensão para o VS Code que integra capacidades de IA e automação para auxiliar no desenvolvimento. O projeto inclui um sistema automatizado de organização, análise de desempenho, perfis inteligentes de extensões e atualização automática no GitHub.
 
 ## Funcionalidades Principais
 
@@ -12,6 +12,10 @@ DevAI Extension é uma extensão para o VS Code que integra capacidades de IA pa
 -   Painel de controle intuitivo
 -   Gerenciamento de configurações
 -   Logging e monitoramento
+-   **Organizador de Extensões**: agrupa, recomenda, ativa/desativa e instala extensões por categoria
+-   **Perfis Inteligentes**: detecta o tipo de projeto e sugere/aplica perfis de extensões e configurações
+-   **Análise de Desempenho**: relatório de uso de memória, CPU e impacto das extensões
+-   **Comandos VS Code**: comandos rápidos para organizar, validar, analisar e gerenciar perfis
 
 ### Sistema de Organização
 
@@ -28,9 +32,16 @@ devai-extension/
 │   ├── core/           # Núcleo da extensão
 │   │   ├── aiManager.ts
 │   │   ├── logger.ts
-│   │   └── setup_manager.ts
+│   │   ├── setup_manager.ts
+│   │   ├── smartProfiles.ts
+│   │   ├── performanceAnalyzer.ts
+│   │   └── extensionOrganizer.ts
 │   └── ui/            # Interface do usuário
 │       └── aiPanel.ts
+├── organizar-projeto.js
+├── atualizar-github.js
+├── relatorio-organizacao.txt
+├── relatorio-github.txt
 ├── docs/              # Documentação
 ├── scripts/           # Scripts de automação
 └── tests/             # Testes
@@ -58,13 +69,15 @@ npm run compile
 
 ## Uso
 
-### Extensão
+### Comandos da Extensão (VS Code)
 
-1. Instale a extensão no VS Code
-2. Ative a extensão
-3. Use o painel de controle para interagir com a IA
+- `DevAI: Validar Extensões` — Detecta e sugere perfis inteligentes para o projeto
+- `DevAI: Organizar Extensões` — Gera relatório, recomenda, ativa/desativa e instala extensões
+- `DevAI: Analisar Desempenho` — Mostra relatório de uso de recursos e sugestões de otimização
+- `DevAI: Criar/Aplicar/Excluir Perfil de Extensões` — Gerencia perfis personalizados
+- `DevAI: Gerenciar Grupos de Extensões` — Ativa/desativa grupos de extensões por categoria
 
-### Sistema de Organização
+### Scripts de Organização
 
 1. Execute o script de organização:
 
@@ -82,6 +95,7 @@ node organizar-projeto.js
 -   [Implementação e Utilização](docs/IMPLEMENTACAO.md)
 -   [Roadmap](docs/ROADMAP.md)
 -   [Fluxograma do Sistema](docs/FLUXOGRAMA.md)
+-   [Guia de Uso](docs/usage.md)
 
 ## Contribuição
 
