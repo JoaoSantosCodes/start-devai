@@ -20,5 +20,5 @@
         "noImplicitThis": true,
         "strictNullChecks": true
     },
-    "exclude": ["node_modules", ".vscode-test", "out", "dist"]
+    "exclude": ["node_modules", ".vscode-test", "out", "dist", "__backup_organizer"]
 }

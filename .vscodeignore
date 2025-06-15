@@ -14,3 +14,9 @@ media/icons/devai.png
 scripts/**
 tests/**
 *.vsix 
+out/
+dist/
+node_modules/
+inventario-arquivos.txt
+inventario-arquivos.json
+__backup_organizer/

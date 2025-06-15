@@ -43,3 +43,6 @@ Thumbs.db
 # Outros
 *.spec
 temp_* 
+inventario-arquivos.txt
+inventario-arquivos.json
+__backup_organizer/

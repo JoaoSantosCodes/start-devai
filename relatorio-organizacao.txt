@@ -1,0 +1,8 @@
+Backup realizado.
+Movido: C:\Cursor\devai-extension\__backup_organizer\src\core\aiManager.ts -> C:\Cursor\devai-extension\src\core\aiManager.ts
+Movido: C:\Cursor\devai-extension\__backup_organizer\src\core\logger.ts -> C:\Cursor\devai-extension\src\core\logger.ts
+Movido: C:\Cursor\devai-extension\__backup_organizer\src\core\setup_manager.ts -> C:\Cursor\devai-extension\src\core\setup_manager.ts
+Movido: C:\Cursor\devai-extension\__backup_organizer\src\ui\aiPanel.ts -> C:\Cursor\devai-extension\src\ui\aiPanel.ts
+Atualizado: C:\Cursor\devai-extension\.vscodeignore
+Validação: Projeto compilou com sucesso.
+Organização concluída com sucesso.
