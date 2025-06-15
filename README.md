@@ -1,9 +1,9 @@
 # DevAI Assistant
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![CI/CD](https://github.com/seu-usuario/devai-assistant/actions/workflows/ci.yml/badge.svg)](https://github.com/seu-usuario/devai-assistant/actions/workflows/ci.yml)
-[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/seu-usuario.devai-assistant)](https://marketplace.visualstudio.com/items?itemName=seu-usuario.devai-assistant)
-[![Downloads](https://img.shields.io/visual-studio-marketplace/d/seu-usuario.devai-assistant)](https://marketplace.visualstudio.com/items?itemName=seu-usuario.devai-assistant)
+[![CI/CD](https://github.com/DevAI-Assistant/DevAI-Assistant/actions/workflows/ci.yml/badge.svg)](https://github.com/DevAI-Assistant/DevAI-Assistant/actions/workflows/ci.yml)
+[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/devai-assistant.devai-assistant)](https://marketplace.visualstudio.com/items?itemName=devai-assistant.devai-assistant)
+[![Downloads](https://img.shields.io/visual-studio-marketplace/d/devai-assistant.devai-assistant)](https://marketplace.visualstudio.com/items?itemName=devai-assistant.devai-assistant)
 
 Uma extensão do VS Code que integra assistentes de IA para desenvolvimento, oferecendo uma experiência moderna e intuitiva.
 
@@ -11,18 +11,17 @@ Uma extensão do VS Code que integra assistentes de IA para desenvolvimento, ofe
 
 ## 🚀 Recursos
 
--   🤖 Interface moderna e responsiva
+-   🤖 Interface moderna e responsiva com WebView
 -   📊 Painel de controle com estatísticas em tempo real
 -   ⚡ Inicialização automática do assistente
--   ⚙️ Configurações personalizáveis
--   🧠 Suporte a múltiplos modelos de IA
+-   ⚙️ Configurações personalizáveis via VS Code Settings
+-   🧠 Suporte a múltiplos modelos de IA (OpenAI, Ollama)
 -   🎯 Integração completa com VS Code
 -   📝 Comandos rápidos via paleta de comandos
--   🔄 Status bar integration
+-   🔄 Status bar integration com indicador de status
 
 ## 📋 Pré-requisitos
 
--   Python 3.8 ou superior
 -   Node.js v18 ou superior
 -   VS Code 1.85.0 ou superior
 -   Ollama (opcional, para modelos locais)
@@ -41,31 +40,36 @@ Uma extensão do VS Code que integra assistentes de IA para desenvolvimento, ofe
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/devai-assistant.git
-cd devai-assistant
+git clone https://github.com/DevAI-Assistant/DevAI-Assistant.git
+cd DevAI-Assistant
 ```
 
-2. Execute o script de inicialização:
+2. Instale as dependências:
 
 ```bash
-start-devai.bat
+npm install
 ```
 
-O script irá:
+3. Compile a extensão:
 
--   Verificar e configurar o ambiente
--   Instalar dependências
--   Iniciar o VS Code com a extensão
--   Ativar o assistente automaticamente
+```bash
+npm run compile
+```
+
+4. Execute a extensão:
+
+```bash
+npm run watch
+```
 
 ## 🎮 Como Usar
 
 ### Início Rápido
 
-1. Execute `start-devai.bat`
-2. O VS Code abrirá automaticamente
-3. O assistente será iniciado
-4. Use o ícone na barra de status ou Ctrl+Shift+P
+1. Instale a extensão
+2. Configure suas credenciais de API (se necessário)
+3. Use o ícone na barra de status ou Ctrl+Shift+P
+4. Selecione "DevAI: Start Assistant"
 
 ### Comandos Disponíveis
 
@@ -73,6 +77,8 @@ O script irá:
 -   `DevAI: Stop Assistant` - Para o assistente
 -   `DevAI: Configure Assistant` - Abre as configurações
 -   `DevAI: Toggle Assistant Panel` - Mostra/esconde o painel
+-   `DevAI: Clear Chat History` - Limpa o histórico de chat
+-   `DevAI: Export Chat History` - Exporta o histórico de chat
 
 ### Configurações
 
@@ -83,19 +89,21 @@ Acesse as configurações em:
 
 Configurações disponíveis:
 
--   `devai-assistant.autoStart`: Iniciar automaticamente
--   `devai-assistant.model`: Modelo de IA (llama2, codellama, mistral)
--   `devai-assistant.maxTokens`: Máximo de tokens
--   `devai-assistant.temperature`: Temperatura para geração
+-   `devai-assistant.autoStart`: Iniciar automaticamente (padrão: true)
+-   `devai-assistant.model`: Modelo de IA (gpt-3.5-turbo, gpt-4, llama2, codellama, mistral)
+-   `devai-assistant.maxTokens`: Máximo de tokens (padrão: 2000)
+-   `devai-assistant.temperature`: Temperatura para geração (padrão: 0.7)
+-   `devai-assistant.apiKey`: Chave da API (OpenAI)
+-   `devai-assistant.ollamaEndpoint`: Endpoint do Ollama (padrão: http://localhost:11434)
 
 ## 🎨 Interface
 
 O DevAI Assistant oferece uma interface moderna e intuitiva:
 
--   **Painel de Controle**: Acesso rápido a todas as funcionalidades
+-   **Painel de Controle**: Acesso rápido a todas as funcionalidades via WebView
 -   **Status Bar**: Indicador de status e acesso rápido
 -   **Estatísticas**: Monitoramento em tempo real
--   **Configurações**: Personalização completa
+-   **Configurações**: Personalização completa via VS Code Settings
 
 ## 🤝 Contribuindo
 
@@ -117,18 +125,15 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 
 -   VS Code Team
 -   Ollama Team
+-   OpenAI Team
 -   Todos os contribuidores
 
 ## 📞 Suporte
 
--   [Issues](https://github.com/seu-usuario/devai-assistant/issues)
--   [Documentação](https://github.com/seu-usuario/devai-assistant/wiki)
--   [Discord](https://discord.gg/seu-servidor)
+-   [Issues](https://github.com/DevAI-Assistant/DevAI-Assistant/issues)
+-   [Documentação](https://github.com/DevAI-Assistant/DevAI-Assistant/wiki)
+-   [Discord](https://discord.gg/devai-assistant)
 
 ## 🔄 Atualizações
 
 Veja o [ROADMAP](ROADMAP.md) para as próximas atualizações e recursos planejados.
-
-## 📊 Estatísticas
-
-![Estatísticas do Repositório](https://repobeats.axiom.co/api/embed/your-repobeats-hash.svg 'Repobeats analytics image')

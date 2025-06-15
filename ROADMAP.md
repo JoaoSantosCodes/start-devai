@@ -1,4 +1,4 @@
-# DevAI Assistant - Roadmap
+# Roadmap do DevAI Assistant
 
 ## Versão 1.0.0 (Atual)
 
@@ -11,56 +11,89 @@
 -   ✅ Status bar integration
 -   ✅ Comandos rápidos via paleta de comandos
 
-## Versão 1.1.0 (Próxima)
+## Versão 1.1.0 (Em Desenvolvimento)
 
+### Recursos Planejados
+
+-   [ ] Suporte a múltiplos modelos de IA simultâneos
 -   [ ] Integração com GitHub Copilot
--   [ ] Suporte a mais modelos de IA
--   [ ] Melhorias na interface do usuário
-    -   [ ] Tema escuro/claro
-    -   [ ] Personalização de cores
-    -   [ ] Layouts personalizáveis
--   [ ] Histórico de conversas
--   [ ] Exportação de conversas
+-   [ ] Exportação de histórico de chat em múltiplos formatos
+-   [ ] Temas personalizáveis para o painel
 -   [ ] Atalhos de teclado personalizáveis
+-   [ ] Suporte a snippets de código
+-   [ ] Integração com Git para análise de código
+-   [ ] Melhorias na interface do usuário
+    -   [ ] Modo escuro/claro automático
+    -   [ ] Layout responsivo aprimorado
+    -   [ ] Animações suaves
+    -   [ ] Tooltips informativos
 
-## Versão 1.2.0
-
--   [ ] Integração com outros editores
-    -   [ ] Sublime Text
-    -   [ ] Atom
-    -   [ ] JetBrains IDEs
--   [ ] Suporte a plugins
--   [ ] API para extensões
--   [ ] Integração com sistemas de controle de versão
--   [ ] Análise de código em tempo real
--   [ ] Sugestões de refatoração
-
-## Versão 2.0.0
-
--   [ ] Interface web standalone
--   [ ] Suporte a múltiplos assistentes
--   [ ] Colaboração em tempo real
--   [ ] Integração com ferramentas de CI/CD
--   [ ] Análise de segurança de código
--   [ ] Geração de documentação automática
--   [ ] Suporte a múltiplos idiomas
-
-## Melhorias Técnicas
+### Melhorias Técnicas
 
 -   [ ] Otimização de performance
--   [ ] Redução do uso de memória
--   [ ] Melhor gerenciamento de recursos
+-   [ ] Redução do tamanho do pacote
+-   [ ] Melhor gerenciamento de memória
 -   [ ] Testes automatizados
 -   [ ] Documentação de API
--   [ ] Exemplos de uso
--   [ ] Guias de contribuição
+-   [ ] Logs detalhados para debugging
 
-## Recursos Futuros
+## Versão 1.2.0 (Planejada)
 
--   [ ] Aprendizado contínuo
--   [ ] Personalização baseada em uso
--   [ ] Integração com ferramentas de análise de código
--   [ ] Suporte a mais linguagens de programação
--   [ ] Recursos de acessibilidade
--   [ ] Internacionalização
--   [ ] Cloud sync
+### Novos Recursos
+
+-   [ ] Suporte a extensões de terceiros
+-   [ ] Marketplace de modelos de IA
+-   [ ] Integração com serviços de CI/CD
+-   [ ] Análise de código em tempo real
+-   [ ] Sugestões de refatoração
+-   [ ] Suporte a múltiplos idiomas
+-   [ ] Modo offline com modelos locais
+-   [ ] Integração com IDEs populares
+
+### Melhorias de UX
+
+-   [ ] Interface adaptativa
+-   [ ] Personalização avançada
+-   [ ] Atalhos contextuais
+-   [ ] Tutorial interativo
+-   [ ] Feedback visual aprimorado
+-   [ ] Modo de acessibilidade
+
+## Versão 2.0.0 (Futuro)
+
+### Recursos Avançados
+
+-   [ ] Aprendizado de máquina para personalização
+-   [ ] Análise de padrões de código
+-   [ ] Sugestões de otimização
+-   [ ] Integração com ferramentas de análise estática
+-   [ ] Suporte a projetos grandes
+-   [ ] Colaboração em tempo real
+-   [ ] Versionamento de modelos
+-   [ ] API pública para extensões
+
+### Infraestrutura
+
+-   [ ] Arquitetura distribuída
+-   [ ] Cache inteligente
+-   [ ] Balanceamento de carga
+-   [ ] Monitoramento avançado
+-   [ ] Backup automático
+-   [ ] Recuperação de desastres
+-   [ ] Escalabilidade horizontal
+
+## Contribuindo
+
+Se você tem ideias para novos recursos ou melhorias, por favor:
+
+1. Abra uma issue no GitHub
+2. Descreva o recurso ou melhoria
+3. Explique o benefício para os usuários
+4. Sugira uma implementação (se possível)
+
+## Notas
+
+-   As datas de lançamento são estimativas e podem mudar
+-   A prioridade dos recursos pode ser alterada com base no feedback dos usuários
+-   Recursos marcados como [x] já foram implementados
+-   Recursos marcados como [ ] estão planejados ou em desenvolvimento

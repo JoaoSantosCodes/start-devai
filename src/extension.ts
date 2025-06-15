@@ -1,15 +1,14 @@
 import * as vscode from 'vscode';
 import { AIPanel } from './ui/aiPanel';
 import { SetupManager } from './core/setup_manager';
-import { Logger } from './utils/logger';
+import { Logger } from './core/logger';
 
 let aiPanel: AIPanel;
 let setupManager: SetupManager;
-let logger: Logger;
 
 export async function activate(context: vscode.ExtensionContext) {
-    logger = new Logger();
-    setupManager = new SetupManager(logger);
+    Logger.initialize(context);
+    setupManager = new SetupManager();
     aiPanel = new AIPanel(context);
 
     // Registrar comandos
@@ -19,7 +18,7 @@ export async function activate(context: vscode.ExtensionContext) {
             aiPanel.createOrShow();
             vscode.window.showInformationMessage('DevAI Assistant started successfully!');
         } catch (error) {
-            vscode.window.showErrorMessage(`Failed to start DevAI Assistant: ${error}`);
+            Logger.log('Failed to start DevAI Assistant: ' + error);
         }
     });
 
@@ -58,7 +57,7 @@ export async function activate(context: vscode.ExtensionContext) {
             await setupManager.start();
             aiPanel.createOrShow();
         } catch (error) {
-            logger.error('Failed to auto-start DevAI Assistant:', error);
+            Logger.log('Failed to auto-start DevAI Assistant: ' + error);
         }
     }
 
@@ -71,7 +70,7 @@ export async function activate(context: vscode.ExtensionContext) {
 export function deactivate() {
     if (setupManager) {
         setupManager.stop().catch((error) => {
-            logger.error('Error during deactivation:', error);
+            Logger.log('Error during deactivation: ' + error);
         });
     }
     if (aiPanel) {

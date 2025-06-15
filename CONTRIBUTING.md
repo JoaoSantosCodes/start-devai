@@ -1,95 +1,121 @@
 # Guia de Contribuição
 
-Obrigado por considerar contribuir com o DevAI Assistant! Este documento fornece diretrizes e instruções para contribuir com o projeto.
+Obrigado pelo seu interesse em contribuir com o DevAI Assistant! Este documento fornece diretrizes e instruções para contribuir com o projeto.
 
-## 📋 Código de Conduta
+## Código de Conduta
 
-Este projeto e todos que participam dele estão vinculados ao nosso [Código de Conduta](CODE_OF_CONDUCT.md). Ao participar, você deve manter este código.
+Por favor, leia nosso [Código de Conduta](CODE_OF_CONDUCT.md) antes de contribuir. Esperamos que todos os contribuidores sigam estas diretrizes.
 
-## 🤝 Como Contribuir
+## Como Contribuir
 
-### Reportando Bugs
+### 1. Configuração do Ambiente
 
--   Use o [GitHub Issues](https://github.com/seu-usuario/devai-assistant/issues)
--   Verifique se o bug já foi reportado
--   Use o template de bug report
--   Inclua passos para reproduzir
--   Inclua screenshots se aplicável
--   Descreva o comportamento esperado
-
-### Sugerindo Melhorias
-
--   Use o [GitHub Issues](https://github.com/seu-usuario/devai-assistant/issues)
--   Use o template de feature request
--   Descreva o problema que a feature resolve
--   Explique por que esta feature seria útil
--   Sugira uma implementação se possível
-
-### Pull Requests
-
-1. Fork o projeto
-2. Crie uma branch para sua feature
-3. Faça commit das suas mudanças
-4. Push para a branch
-5. Abra um Pull Request
-
-### Padrões de Código
-
--   Siga o estilo de código existente
--   Use TypeScript para código frontend
--   Use Python para código backend
--   Documente seu código
--   Adicione testes quando necessário
-
-### Commits
-
--   Use mensagens de commit claras e descritivas
--   Siga o padrão [Conventional Commits](https://www.conventionalcommits.org/)
--   Exemplo: `feat: add new command to toggle panel`
-
-### Testes
-
--   Execute os testes existentes: `npm test`
--   Adicione testes para novas funcionalidades
--   Mantenha a cobertura de testes alta
-
-## 🛠️ Ambiente de Desenvolvimento
-
-1. Clone o repositório
-2. Instale as dependências:
+1. Faça um fork do repositório
+2. Clone seu fork:
+    ```bash
+    git clone https://github.com/seu-usuario/DevAI-Assistant.git
+    cd DevAI-Assistant
+    ```
+3. Instale as dependências:
     ```bash
     npm install
-    pip install -r requirements.txt
     ```
-3. Configure o ambiente:
+4. Compile o projeto:
     ```bash
-    start-devai.bat
+    npm run compile
     ```
 
-## 📚 Documentação
+### 2. Fluxo de Trabalho
 
--   Mantenha a documentação atualizada
--   Use Markdown para documentação
--   Inclua exemplos de código
--   Documente APIs e interfaces
+1. Crie uma branch para sua feature:
+    ```bash
+    git checkout -b feature/nome-da-feature
+    ```
+2. Faça suas alterações
+3. Execute os testes:
+    ```bash
+    npm test
+    ```
+4. Commit suas alterações:
+    ```bash
+    git commit -m "feat: descrição da feature"
+    ```
+5. Push para sua branch:
+    ```bash
+    git push origin feature/nome-da-feature
+    ```
+6. Abra um Pull Request
 
-## 🔄 Processo de Revisão
+### 3. Convenções de Código
 
-1. Pull Requests serão revisados por mantenedores
-2. Feedback será fornecido em até 48 horas
-3. Mudanças podem ser solicitadas
-4. Após aprovação, o PR será mesclado
+-   Use TypeScript para todo o código novo
+-   Siga o estilo de código existente
+-   Use ESLint e Prettier para formatação
+-   Escreva testes para novas funcionalidades
+-   Documente novas APIs e funções
+-   Mantenha o código limpo e organizado
 
-## 🎯 Roadmap
+### 4. Commits
 
-Veja o [ROADMAP](ROADMAP.md) para entender as prioridades do projeto e onde sua contribuição pode ser mais útil.
+Siga o padrão [Conventional Commits](https://www.conventionalcommits.org/):
 
-## 📞 Suporte
+-   `feat:` para novas features
+-   `fix:` para correções de bugs
+-   `docs:` para documentação
+-   `style:` para formatação
+-   `refactor:` para refatoração
+-   `test:` para testes
+-   `chore:` para tarefas de manutenção
 
--   [Discord](https://discord.gg/seu-servidor)
--   [GitHub Issues](https://github.com/seu-usuario/devai-assistant/issues)
--   [Documentação](https://github.com/seu-usuario/devai-assistant/wiki)
+### 5. Pull Requests
 
-## 🙏 Agradecimentos
+1. Atualize sua branch com a main:
+    ```bash
+    git checkout main
+    git pull
+    git checkout feature/nome-da-feature
+    git rebase main
+    ```
+2. Resolva conflitos se houver
+3. Certifique-se que todos os testes passam
+4. Atualize a documentação se necessário
+5. Descreva suas alterações no PR
 
-Obrigado por contribuir com o DevAI Assistant! Sua ajuda é muito apreciada.
+### 6. Documentação
+
+-   Atualize o README.md se necessário
+-   Documente novas APIs e funções
+-   Adicione exemplos de uso
+-   Atualize o CHANGELOG.md
+
+### 7. Testes
+
+-   Escreva testes unitários
+-   Escreva testes de integração
+-   Mantenha a cobertura de testes alta
+-   Execute todos os testes antes de submeter
+
+### 8. Revisão de Código
+
+-   Responda aos comentários dos revisores
+-   Faça as alterações solicitadas
+-   Mantenha o PR atualizado
+-   Seja paciente com o processo de revisão
+
+## Recursos
+
+-   [Documentação da API](https://github.com/DevAI-Assistant/DevAI-Assistant/wiki)
+-   [Guia de Estilo](https://github.com/DevAI-Assistant/DevAI-Assistant/wiki/Style-Guide)
+-   [FAQ](https://github.com/DevAI-Assistant/DevAI-Assistant/wiki/FAQ)
+
+## Suporte
+
+Se você tiver dúvidas ou precisar de ajuda:
+
+-   Abra uma issue no GitHub
+-   Entre em contato via Discord
+-   Consulte a documentação
+
+## Agradecimentos
+
+Obrigado por contribuir com o DevAI Assistant! Sua ajuda é muito importante para o projeto.

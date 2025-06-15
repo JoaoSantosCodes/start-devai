@@ -1,6 +1,0 @@
-[Shell Link]
-CommandLine=cmd.exe /c "cd /d %~dp0 && start-devai.bat"
-IconFile=media\icons\devai.ico
-ShowCommand=1
-HotKey=0
-IconIndex=0 

@@ -6,7 +6,7 @@ No interesse de promover um ambiente aberto e acolhedor, nós, como contribuidor
 
 ## Nossos Padrões
 
-Exemplos de comportamento que contribuem para um ambiente positivo incluem:
+Exemplos de comportamento que contribuem para criar um ambiente positivo incluem:
 
 -   Usar linguagem acolhedora e inclusiva
 -   Respeitar diferentes pontos de vista e experiências
@@ -20,7 +20,7 @@ Exemplos de comportamento inaceitável incluem:
 -   Trolling, comentários insultuosos/derrogatórios e ataques pessoais ou políticos
 -   Assédio público ou privado
 -   Publicar informações privadas de outros, como endereços físicos ou eletrônicos, sem permissão explícita
--   Outra conduta que poderia razoavelmente ser considerada inapropriada em um ambiente profissional
+-   Outra conduta que poderia ser considerada inapropriada em um ambiente profissional
 
 ## Nossas Responsabilidades
 
@@ -34,8 +34,28 @@ Este Código de Conduta se aplica tanto em espaços do projeto quanto em espaço
 
 ## Aplicação
 
-Casos de comportamento abusivo, de assédio ou inaceitável podem ser reportados entrando em contato com a equipe do projeto. Todas as reclamações serão analisadas e investigadas e resultarão em uma resposta considerada necessária e apropriada às circunstâncias. A equipe do projeto é obrigada a manter a confidencialidade em relação ao relator de um incidente.
+Casos de comportamento abusivo, de assédio ou inaceitável podem ser reportados entrando em contato com a equipe do projeto em [inserir e-mail]. Todas as reclamações serão analisadas e investigadas e resultarão em uma resposta considerada necessária e apropriada às circunstâncias. A equipe do projeto é obrigada a manter a confidencialidade em relação ao relator de um incidente. Mais detalhes de políticas específicas de aplicação podem ser postados separadamente.
+
+Mantenedores do projeto que não seguem ou aplicam o Código de Conduta de boa fé podem enfrentar repercussões temporárias ou permanentes conforme determinado por outros membros da liderança do projeto.
 
 ## Atribuição
 
 Este Código de Conduta é uma adaptação do [Contributor Covenant](https://www.contributor-covenant.org), versão 2.0, disponível em https://www.contributor-covenant.org/pt-br/version/2/0/code_of_conduct.html.
+
+## Contato
+
+Para reportar violações deste código de conduta ou para qualquer dúvida relacionada, por favor entre em contato:
+
+-   Email: [inserir e-mail]
+-   Discord: [inserir link do Discord]
+-   GitHub: [inserir link do GitHub]
+
+## Aplicação
+
+Este código de conduta será aplicado de forma justa e consistente por todos os membros da comunidade. Violações podem resultar em:
+
+1. Aviso verbal ou por escrito
+2. Suspensão temporária do acesso ao projeto
+3. Banimento permanente do projeto
+
+A severidade da punição será determinada com base na gravidade da violação e no histórico do indivíduo na comunidade.
