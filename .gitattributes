@@ -1,0 +1,65 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Python files
+*.py text diff=python
+
+# TypeScript files
+*.ts text
+*.tsx text
+
+# JavaScript files
+*.js text
+*.jsx text
+
+# JSON files
+*.json text
+
+# YAML files
+*.yml text
+*.yaml text
+
+# Markdown files
+*.md text diff=markdown
+
+# Documentation
+docs/**/*.md text diff=markdown
+
+# Config files
+.editorconfig text
+.gitattributes text
+.gitignore text
+.eslintrc.json text
+.prettierrc text
+tsconfig.json text
+package.json text
+requirements.txt text
+setup.cfg text
+pytest.ini text
+.coveragerc text
+
+# Build files
+*.spec text
+*.exe binary
+*.dll binary
+*.so binary
+*.dylib binary
+
+# Logs
+*.log text
+logs/**/*.log text
+
+# Environment
+.env text
+.env.* text
+.venv/ binary
+__pycache__/ binary
+*.pyc binary
+*.pyo binary
+*.pyd binary
+
+# IDE
+.vscode/** text
+.idea/** text
+*.swp text
+*.swo text 

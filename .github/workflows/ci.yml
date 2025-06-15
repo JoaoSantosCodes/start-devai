@@ -1,0 +1,50 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.8'
+        cache: 'pip'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        npm install
+
+    - name: Run tests
+      run: |
+        npm run test
+
+    - name: Build extension
+      run: |
+        npm run compile
+
+    - name: Package extension
+      run: |
+        npm run package
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: devai-assistant
+        path: '*.vsix' 

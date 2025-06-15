@@ -1,5 +1,23 @@
-# Node
+# Dependencies
 node_modules/
+.venv/
+__pycache__/
+*.pyc
+
+# Build
+out/
+dist/
+*.vsix
+
+# IDE
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
 
 # Logs
 logs/
@@ -8,24 +26,20 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Build
-build/
-dist/
-out/
+# Environment
+.env
+.env.local
+.env.*.local
 
-# Python
-.venv/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# VSCode
-.vscode/
-
-# Outros
+# System
 .DS_Store
 Thumbs.db
-.env
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Outros
 *.spec
 temp_* 

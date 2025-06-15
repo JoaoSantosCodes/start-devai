@@ -1,0 +1,14 @@
+{
+    "recommendations": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.black-formatter",
+        "ms-python.pylint",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-vscode.vscode-typescript-next",
+        "eamodio.gitlens",
+        "streetsidesoftware.code-spell-checker",
+        "yzhang.markdown-all-in-one"
+    ]
+}

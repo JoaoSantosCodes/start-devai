@@ -1,10 +1,29 @@
 {
   "compilerOptions": {
-    "target": "ES2018",
     "module": "commonjs",
-    "lib": ["ES2018", "DOM"],
-    "outDir": "./out",
+    "target": "ES2020",
+    "outDir": "out",
+    "lib": [
+      "ES2020"
+    ],
+    "sourceMap": true,
+    "rootDir": "src",
     "strict": true,
-    "esModuleInterop": true
-  }
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true
+  },
+  "exclude": [
+    "node_modules",
+    ".vscode-test"
+  ]
 }
